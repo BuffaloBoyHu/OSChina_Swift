@@ -11,14 +11,34 @@ import MJRefresh
 
 class CustomTableView: UITableView {
 
-    init() {
+    var tableName :String? = nil
+    
+    // MARK: 构造函数
+    init(cellReuseIndentifier :String) {
+        self.tableName = cellReuseIndentifier
         super.init(frame: UIScreen.main.bounds, style: UITableViewStyle.plain);
+        self.addMjRefreshControl(needRefresh: true)
+        self.register(CustomTableViewCell.self, forCellReuseIdentifier: cellReuseIndentifier)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    func addMjRefreshControl() {
-        self.mj_header = MJRefreshHeader.init(refreshingTarget: self, refreshingAction: )
+    // MARK: 添加刷新控件
+    func addMjRefreshControl(needRefresh :Bool) {
+        self.mj_header = MJRefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(CustomTableView.pullToRefresh))
+        self.mj_footer = MJRefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(CustomTableView.pullToLoadMore))
+        if needRefresh {
+            self.mj_header.beginRefreshing()
+        }
+    }
+    
+    func pullToRefresh()  {
+        // 下拉刷新
+        
+    }
+    
+    func pullToLoadMore() {
+        //上拉加载更多
     }
 }

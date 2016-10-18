@@ -8,12 +8,20 @@
 
 import UIKit
 
-class APPTabbarController: UITabBarController {
-
+class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
+    let projectsController = CustomViewController.init(title: "项目", subTitles: ["推荐","热门","最近跟新"])
+    let mineController = CustomViewController.init(title: "我的", subTitles: ["动态","项目","Star","Watch"])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.projectsController.tabBarItem.image = #imageLiteral(resourceName: "projects")
+        self.projectsController.tabBarItem.selectedImage = #imageLiteral(resourceName: "projects_selected")
+        self.mineController.tabBarItem.image = #imageLiteral(resourceName: "mine")
+        self.mineController.tabBarItem.selectedImage = #imageLiteral(resourceName: "mine_selected")
+        self.viewControllers = [self.projectsController,self.mineController]
+        self.title = self.selectedViewController?.title
+        self.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +29,8 @@ class APPTabbarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        self.title = viewController.title
     }
-    */
 
 }

@@ -22,10 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible();
         
         // 设置导航条背景色
-        navigationController?.navigationBar.barTintColor = UITool.UIColorFromRGB(rgbValue: 0x0a5090);
-        navigationController?.navigationBar.tintColor = UIColor.white;
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white];
-        
+        UINavigationBar.appearance().barTintColor = UITool.UIColorFromRGB(rgbValue: 0x0a5090)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white];
         
         return true
     }
