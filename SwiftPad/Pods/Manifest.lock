@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.0.1)
+  - MJRefresh (3.1.12)
+  - Refresher (0.6.1)
+  - SDWebImage (4.0.0-beta2):
+    - SDWebImage/Core (= 4.0.0-beta2)
+  - SDWebImage/Core (4.0.0-beta2)
+  - SnapKit (3.0.2)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.1)
+  - MJRefresh (~> 3.1.12)
+  - Refresher (~> 0.6.1)
+  - SDWebImage (~> 4.0.0-beta2)
+  - SnapKit (~> 3.0.2)
+  - YYKit (~> 1.0.9)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Refresher: 7c6f09ef3428aa921cb477611fb26bf29a9e5492
+  SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 3f01a1d084180cad7e83092b06eff8ef73ed216e
+
+COCOAPODS: 1.0.0

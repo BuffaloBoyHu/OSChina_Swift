@@ -1,0 +1,6 @@
+framework module Pods_SwiftPad {
+  umbrella header "Pods-SwiftPad-umbrella.h"
+
+  export *
+  module * { export * }
+}

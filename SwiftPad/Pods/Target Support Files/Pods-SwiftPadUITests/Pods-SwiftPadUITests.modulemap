@@ -1,0 +1,6 @@
+framework module Pods_SwiftPadUITests {
+  umbrella header "Pods-SwiftPadUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

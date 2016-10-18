@@ -7,137 +7,226 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F372C011DB1B6E50005556A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F372C001DB1B6E50005556A /* AppDelegate.swift */; };
-		0F372C031DB1B6E50005556A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F372C021DB1B6E50005556A /* FirstViewController.swift */; };
-		0F372C051DB1B6E50005556A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F372C041DB1B6E50005556A /* SecondViewController.swift */; };
-		0F372C081DB1B6E50005556A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F372C061DB1B6E50005556A /* Main.storyboard */; };
-		0F372C0A1DB1B6E50005556A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F372C091DB1B6E50005556A /* Assets.xcassets */; };
-		0F372C0D1DB1B6E50005556A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F372C0B1DB1B6E50005556A /* LaunchScreen.storyboard */; };
-		0F372C181DB1B6E60005556A /* SwiftPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F372C171DB1B6E60005556A /* SwiftPadTests.swift */; };
-		0F372C231DB1B6E60005556A /* SwiftPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F372C221DB1B6E60005556A /* SwiftPadUITests.swift */; };
+		0F08FCD01DB1CFF50033E9F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F08FCCF1DB1CFF50033E9F4 /* AppDelegate.swift */; };
+		0F08FCD71DB1CFF50033E9F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F08FCD51DB1CFF50033E9F4 /* Main.storyboard */; };
+		0F08FCD91DB1CFF50033E9F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F08FCD81DB1CFF50033E9F4 /* Assets.xcassets */; };
+		0F08FCDC1DB1CFF50033E9F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F08FCDA1DB1CFF50033E9F4 /* LaunchScreen.storyboard */; };
+		0F08FCE71DB1CFF50033E9F4 /* SwiftPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F08FCE61DB1CFF50033E9F4 /* SwiftPadTests.swift */; };
+		0F08FCF21DB1CFF50033E9F4 /* SwiftPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F08FCF11DB1CFF50033E9F4 /* SwiftPadUITests.swift */; };
+		0FA343F31DB47F3D00BB4C7F /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */; };
+		0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */; };
+		0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */; };
+		0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA41DB46AC900409CF2 /* UITool.swift */; };
+		EFF7792548DC2FD953CE0C1D /* Pods_SwiftPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AC16CE2F662CBADE351D8B /* Pods_SwiftPadTests.framework */; };
+		F1C969E7ACEFEAA840A88ABD /* Pods_SwiftPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520BEDC8E545F33EA6217936 /* Pods_SwiftPadUITests.framework */; };
+		FD37B35CF9A05C5E55204CCD /* Pods_SwiftPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529A2E4BC73F0E305C370F3A /* Pods_SwiftPad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0F372C141DB1B6E60005556A /* PBXContainerItemProxy */ = {
+		0F08FCE31DB1CFF50033E9F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0F372BF51DB1B6E50005556A /* Project object */;
+			containerPortal = 0F08FCC41DB1CFF40033E9F4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0F372BFC1DB1B6E50005556A;
+			remoteGlobalIDString = 0F08FCCB1DB1CFF40033E9F4;
 			remoteInfo = SwiftPad;
 		};
-		0F372C1F1DB1B6E60005556A /* PBXContainerItemProxy */ = {
+		0F08FCEE1DB1CFF50033E9F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0F372BF51DB1B6E50005556A /* Project object */;
+			containerPortal = 0F08FCC41DB1CFF40033E9F4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0F372BFC1DB1B6E50005556A;
+			remoteGlobalIDString = 0F08FCCB1DB1CFF40033E9F4;
 			remoteInfo = SwiftPad;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F372BFD1DB1B6E50005556A /* SwiftPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F372C001DB1B6E50005556A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F372C021DB1B6E50005556A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0F372C041DB1B6E50005556A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		0F372C071DB1B6E50005556A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0F372C091DB1B6E50005556A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0F372C0C1DB1B6E50005556A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0F372C0E1DB1B6E50005556A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F372C131DB1B6E60005556A /* SwiftPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F372C171DB1B6E60005556A /* SwiftPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPadTests.swift; sourceTree = "<group>"; };
-		0F372C191DB1B6E60005556A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F372C1E1DB1B6E60005556A /* SwiftPadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F372C221DB1B6E60005556A /* SwiftPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPadUITests.swift; sourceTree = "<group>"; };
-		0F372C241DB1B6E60005556A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F08FCCC1DB1CFF40033E9F4 /* SwiftPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F08FCCF1DB1CFF50033E9F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F08FCD61DB1CFF50033E9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F08FCD81DB1CFF50033E9F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F08FCDB1DB1CFF50033E9F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F08FCDD1DB1CFF50033E9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F08FCE21DB1CFF50033E9F4 /* SwiftPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F08FCE61DB1CFF50033E9F4 /* SwiftPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPadTests.swift; sourceTree = "<group>"; };
+		0F08FCE81DB1CFF50033E9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F08FCED1DB1CFF50033E9F4 /* SwiftPadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F08FCF11DB1CFF50033E9F4 /* SwiftPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPadUITests.swift; sourceTree = "<group>"; };
+		0F08FCF31DB1CFF50033E9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabbarController.swift; sourceTree = "<group>"; };
+		0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		0FA7AAA41DB46AC900409CF2 /* UITool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITool.swift; sourceTree = "<group>"; };
+		154F4D929832FC5FF519ADD6 /* Pods-SwiftPadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21AA7724F6101AE4FB6A98B7 /* Pods-SwiftPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPad/Pods-SwiftPad.release.xcconfig"; sourceTree = "<group>"; };
+		25FE869FFC271AB577CF2D32 /* Pods-SwiftPadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests.release.xcconfig"; sourceTree = "<group>"; };
+		28694C791EFB4587AD5A2D71 /* Pods-SwiftPadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadUITests/Pods-SwiftPadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		520BEDC8E545F33EA6217936 /* Pods_SwiftPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		529A2E4BC73F0E305C370F3A /* Pods_SwiftPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C54BA333F66D95A62E27705 /* Pods-SwiftPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPad/Pods-SwiftPad.debug.xcconfig"; sourceTree = "<group>"; };
+		D1F638F7D66E1EB248BB50EE /* Pods-SwiftPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadUITests/Pods-SwiftPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7AC16CE2F662CBADE351D8B /* Pods_SwiftPadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0F372BFA1DB1B6E50005556A /* Frameworks */ = {
+		0F08FCC91DB1CFF40033E9F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD37B35CF9A05C5E55204CCD /* Pods_SwiftPad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F372C101DB1B6E60005556A /* Frameworks */ = {
+		0F08FCDF1DB1CFF50033E9F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF7792548DC2FD953CE0C1D /* Pods_SwiftPadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F372C1B1DB1B6E60005556A /* Frameworks */ = {
+		0F08FCEA1DB1CFF50033E9F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C969E7ACEFEAA840A88ABD /* Pods_SwiftPadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F372BF41DB1B6E50005556A = {
+		0F08FCC31DB1CFF40033E9F4 = {
 			isa = PBXGroup;
 			children = (
-				0F372BFF1DB1B6E50005556A /* SwiftPad */,
-				0F372C161DB1B6E60005556A /* SwiftPadTests */,
-				0F372C211DB1B6E60005556A /* SwiftPadUITests */,
-				0F372BFE1DB1B6E50005556A /* Products */,
+				0F08FCCE1DB1CFF40033E9F4 /* SwiftPad */,
+				0F08FCE51DB1CFF50033E9F4 /* SwiftPadTests */,
+				0F08FCF01DB1CFF50033E9F4 /* SwiftPadUITests */,
+				0F08FCCD1DB1CFF40033E9F4 /* Products */,
+				F8C4B56A486818AA2F8A5759 /* Pods */,
+				3AB4BDB624B0C73A31A5881F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0F372BFE1DB1B6E50005556A /* Products */ = {
+		0F08FCCD1DB1CFF40033E9F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F372BFD1DB1B6E50005556A /* SwiftPad.app */,
-				0F372C131DB1B6E60005556A /* SwiftPadTests.xctest */,
-				0F372C1E1DB1B6E60005556A /* SwiftPadUITests.xctest */,
+				0F08FCCC1DB1CFF40033E9F4 /* SwiftPad.app */,
+				0F08FCE21DB1CFF50033E9F4 /* SwiftPadTests.xctest */,
+				0F08FCED1DB1CFF50033E9F4 /* SwiftPadUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F372BFF1DB1B6E50005556A /* SwiftPad */ = {
+		0F08FCCE1DB1CFF40033E9F4 /* SwiftPad */ = {
 			isa = PBXGroup;
 			children = (
-				0F372C001DB1B6E50005556A /* AppDelegate.swift */,
-				0F372C021DB1B6E50005556A /* FirstViewController.swift */,
-				0F372C041DB1B6E50005556A /* SecondViewController.swift */,
-				0F372C061DB1B6E50005556A /* Main.storyboard */,
-				0F372C091DB1B6E50005556A /* Assets.xcassets */,
-				0F372C0B1DB1B6E50005556A /* LaunchScreen.storyboard */,
-				0F372C0E1DB1B6E50005556A /* Info.plist */,
+				0FA7AA991DB460E500409CF2 /* APP */,
+				0FA7AA9D1DB4611D00409CF2 /* Controllers */,
+				0FA7AA9B1DB4610700409CF2 /* Views */,
+				0FA7AA9E1DB4612600409CF2 /* Models */,
+				0F08FCD51DB1CFF50033E9F4 /* Main.storyboard */,
+				0F08FCD81DB1CFF50033E9F4 /* Assets.xcassets */,
+				0FA7AA9F1DB4613300409CF2 /* Utils */,
+				0F08FCDA1DB1CFF50033E9F4 /* LaunchScreen.storyboard */,
+				0F08FCDD1DB1CFF50033E9F4 /* Info.plist */,
 			);
 			path = SwiftPad;
 			sourceTree = "<group>";
 		};
-		0F372C161DB1B6E60005556A /* SwiftPadTests */ = {
+		0F08FCE51DB1CFF50033E9F4 /* SwiftPadTests */ = {
 			isa = PBXGroup;
 			children = (
-				0F372C171DB1B6E60005556A /* SwiftPadTests.swift */,
-				0F372C191DB1B6E60005556A /* Info.plist */,
+				0F08FCE61DB1CFF50033E9F4 /* SwiftPadTests.swift */,
+				0F08FCE81DB1CFF50033E9F4 /* Info.plist */,
 			);
 			path = SwiftPadTests;
 			sourceTree = "<group>";
 		};
-		0F372C211DB1B6E60005556A /* SwiftPadUITests */ = {
+		0F08FCF01DB1CFF50033E9F4 /* SwiftPadUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0F372C221DB1B6E60005556A /* SwiftPadUITests.swift */,
-				0F372C241DB1B6E60005556A /* Info.plist */,
+				0F08FCF11DB1CFF50033E9F4 /* SwiftPadUITests.swift */,
+				0F08FCF31DB1CFF50033E9F4 /* Info.plist */,
 			);
 			path = SwiftPadUITests;
+			sourceTree = "<group>";
+		};
+		0FA7AA991DB460E500409CF2 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				0F08FCCF1DB1CFF50033E9F4 /* AppDelegate.swift */,
+				0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */,
+			);
+			name = APP;
+			sourceTree = "<group>";
+		};
+		0FA7AA9B1DB4610700409CF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0FA7AA9D1DB4611D00409CF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0FA7AA9E1DB4612600409CF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0FA7AA9F1DB4613300409CF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0FA7AAA41DB46AC900409CF2 /* UITool.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3AB4BDB624B0C73A31A5881F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				529A2E4BC73F0E305C370F3A /* Pods_SwiftPad.framework */,
+				E7AC16CE2F662CBADE351D8B /* Pods_SwiftPadTests.framework */,
+				520BEDC8E545F33EA6217936 /* Pods_SwiftPadUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8C4B56A486818AA2F8A5759 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C54BA333F66D95A62E27705 /* Pods-SwiftPad.debug.xcconfig */,
+				21AA7724F6101AE4FB6A98B7 /* Pods-SwiftPad.release.xcconfig */,
+				154F4D929832FC5FF519ADD6 /* Pods-SwiftPadTests.debug.xcconfig */,
+				25FE869FFC271AB577CF2D32 /* Pods-SwiftPadTests.release.xcconfig */,
+				D1F638F7D66E1EB248BB50EE /* Pods-SwiftPadUITests.debug.xcconfig */,
+				28694C791EFB4587AD5A2D71 /* Pods-SwiftPadUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F372BFC1DB1B6E50005556A /* SwiftPad */ = {
+		0F08FCCB1DB1CFF40033E9F4 /* SwiftPad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F372C271DB1B6E60005556A /* Build configuration list for PBXNativeTarget "SwiftPad" */;
+			buildConfigurationList = 0F08FCF61DB1CFF50033E9F4 /* Build configuration list for PBXNativeTarget "SwiftPad" */;
 			buildPhases = (
-				0F372BF91DB1B6E50005556A /* Sources */,
-				0F372BFA1DB1B6E50005556A /* Frameworks */,
-				0F372BFB1DB1B6E50005556A /* Resources */,
+				05A715B96AC32D4B3B79300F /* 📦 Check Pods Manifest.lock */,
+				0F08FCC81DB1CFF40033E9F4 /* Sources */,
+				0F08FCC91DB1CFF40033E9F4 /* Frameworks */,
+				0F08FCCA1DB1CFF40033E9F4 /* Resources */,
+				2E7E03FEDA2F7112E2D78E7B /* 📦 Embed Pods Frameworks */,
+				D40F1ADDDA629F813937A9EF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,75 +234,80 @@
 			);
 			name = SwiftPad;
 			productName = SwiftPad;
-			productReference = 0F372BFD1DB1B6E50005556A /* SwiftPad.app */;
+			productReference = 0F08FCCC1DB1CFF40033E9F4 /* SwiftPad.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0F372C121DB1B6E60005556A /* SwiftPadTests */ = {
+		0F08FCE11DB1CFF50033E9F4 /* SwiftPadTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F372C2A1DB1B6E60005556A /* Build configuration list for PBXNativeTarget "SwiftPadTests" */;
+			buildConfigurationList = 0F08FCF91DB1CFF50033E9F4 /* Build configuration list for PBXNativeTarget "SwiftPadTests" */;
 			buildPhases = (
-				0F372C0F1DB1B6E60005556A /* Sources */,
-				0F372C101DB1B6E60005556A /* Frameworks */,
-				0F372C111DB1B6E60005556A /* Resources */,
+				41605BD3D5F7F5E15F2ED336 /* 📦 Check Pods Manifest.lock */,
+				0F08FCDE1DB1CFF50033E9F4 /* Sources */,
+				0F08FCDF1DB1CFF50033E9F4 /* Frameworks */,
+				0F08FCE01DB1CFF50033E9F4 /* Resources */,
+				51431120D01D50D3F04E0816 /* 📦 Embed Pods Frameworks */,
+				F0C2941B9208FA837A43CFD1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0F372C151DB1B6E60005556A /* PBXTargetDependency */,
+				0F08FCE41DB1CFF50033E9F4 /* PBXTargetDependency */,
 			);
 			name = SwiftPadTests;
 			productName = SwiftPadTests;
-			productReference = 0F372C131DB1B6E60005556A /* SwiftPadTests.xctest */;
+			productReference = 0F08FCE21DB1CFF50033E9F4 /* SwiftPadTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0F372C1D1DB1B6E60005556A /* SwiftPadUITests */ = {
+		0F08FCEC1DB1CFF50033E9F4 /* SwiftPadUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F372C2D1DB1B6E60005556A /* Build configuration list for PBXNativeTarget "SwiftPadUITests" */;
+			buildConfigurationList = 0F08FCFC1DB1CFF50033E9F4 /* Build configuration list for PBXNativeTarget "SwiftPadUITests" */;
 			buildPhases = (
-				0F372C1A1DB1B6E60005556A /* Sources */,
-				0F372C1B1DB1B6E60005556A /* Frameworks */,
-				0F372C1C1DB1B6E60005556A /* Resources */,
+				AB0A46D8067838599B273019 /* 📦 Check Pods Manifest.lock */,
+				0F08FCE91DB1CFF50033E9F4 /* Sources */,
+				0F08FCEA1DB1CFF50033E9F4 /* Frameworks */,
+				0F08FCEB1DB1CFF50033E9F4 /* Resources */,
+				47335D4ED09734A12F65D5CA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0F372C201DB1B6E60005556A /* PBXTargetDependency */,
+				0F08FCEF1DB1CFF50033E9F4 /* PBXTargetDependency */,
 			);
 			name = SwiftPadUITests;
 			productName = SwiftPadUITests;
-			productReference = 0F372C1E1DB1B6E60005556A /* SwiftPadUITests.xctest */;
+			productReference = 0F08FCED1DB1CFF50033E9F4 /* SwiftPadUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0F372BF51DB1B6E50005556A /* Project object */ = {
+		0F08FCC41DB1CFF40033E9F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = buffalo;
 				TargetAttributes = {
-					0F372BFC1DB1B6E50005556A = {
+					0F08FCCB1DB1CFF40033E9F4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = MKQ89D2PC4;
+						DevelopmentTeam = KZJH6SNM75;
 						ProvisioningStyle = Automatic;
 					};
-					0F372C121DB1B6E60005556A = {
+					0F08FCE11DB1CFF50033E9F4 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MKQ89D2PC4;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 0F372BFC1DB1B6E50005556A;
+						TestTargetID = 0F08FCCB1DB1CFF40033E9F4;
 					};
-					0F372C1D1DB1B6E60005556A = {
+					0F08FCEC1DB1CFF50033E9F4 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MKQ89D2PC4;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 0F372BFC1DB1B6E50005556A;
+						TestTargetID = 0F08FCCB1DB1CFF40033E9F4;
 					};
 				};
 			};
-			buildConfigurationList = 0F372BF81DB1B6E50005556A /* Build configuration list for PBXProject "SwiftPad" */;
+			buildConfigurationList = 0F08FCC71DB1CFF40033E9F4 /* Build configuration list for PBXProject "SwiftPad" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,37 +315,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 0F372BF41DB1B6E50005556A;
-			productRefGroup = 0F372BFE1DB1B6E50005556A /* Products */;
+			mainGroup = 0F08FCC31DB1CFF40033E9F4;
+			productRefGroup = 0F08FCCD1DB1CFF40033E9F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F372BFC1DB1B6E50005556A /* SwiftPad */,
-				0F372C121DB1B6E60005556A /* SwiftPadTests */,
-				0F372C1D1DB1B6E60005556A /* SwiftPadUITests */,
+				0F08FCCB1DB1CFF40033E9F4 /* SwiftPad */,
+				0F08FCE11DB1CFF50033E9F4 /* SwiftPadTests */,
+				0F08FCEC1DB1CFF50033E9F4 /* SwiftPadUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0F372BFB1DB1B6E50005556A /* Resources */ = {
+		0F08FCCA1DB1CFF40033E9F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F372C0D1DB1B6E50005556A /* LaunchScreen.storyboard in Resources */,
-				0F372C0A1DB1B6E50005556A /* Assets.xcassets in Resources */,
-				0F372C081DB1B6E50005556A /* Main.storyboard in Resources */,
+				0F08FCDC1DB1CFF50033E9F4 /* LaunchScreen.storyboard in Resources */,
+				0F08FCD91DB1CFF50033E9F4 /* Assets.xcassets in Resources */,
+				0F08FCD71DB1CFF50033E9F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F372C111DB1B6E60005556A /* Resources */ = {
+		0F08FCE01DB1CFF50033E9F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F372C1C1DB1B6E60005556A /* Resources */ = {
+		0F08FCEB1DB1CFF50033E9F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -260,61 +354,186 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05A715B96AC32D4B3B79300F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E7E03FEDA2F7112E2D78E7B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPad/Pods-SwiftPad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41605BD3D5F7F5E15F2ED336 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		47335D4ED09734A12F65D5CA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPadUITests/Pods-SwiftPadUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51431120D01D50D3F04E0816 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB0A46D8067838599B273019 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D40F1ADDDA629F813937A9EF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPad/Pods-SwiftPad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C2941B9208FA837A43CFD1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		0F372BF91DB1B6E50005556A /* Sources */ = {
+		0F08FCC81DB1CFF40033E9F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F372C051DB1B6E50005556A /* SecondViewController.swift in Sources */,
-				0F372C011DB1B6E50005556A /* AppDelegate.swift in Sources */,
-				0F372C031DB1B6E50005556A /* FirstViewController.swift in Sources */,
+				0FA343F31DB47F3D00BB4C7F /* CustomTableView.swift in Sources */,
+				0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */,
+				0F08FCD01DB1CFF50033E9F4 /* AppDelegate.swift in Sources */,
+				0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */,
+				0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F372C0F1DB1B6E60005556A /* Sources */ = {
+		0F08FCDE1DB1CFF50033E9F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F372C181DB1B6E60005556A /* SwiftPadTests.swift in Sources */,
+				0F08FCE71DB1CFF50033E9F4 /* SwiftPadTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F372C1A1DB1B6E60005556A /* Sources */ = {
+		0F08FCE91DB1CFF50033E9F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F372C231DB1B6E60005556A /* SwiftPadUITests.swift in Sources */,
+				0F08FCF21DB1CFF50033E9F4 /* SwiftPadUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F372C151DB1B6E60005556A /* PBXTargetDependency */ = {
+		0F08FCE41DB1CFF50033E9F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F372BFC1DB1B6E50005556A /* SwiftPad */;
-			targetProxy = 0F372C141DB1B6E60005556A /* PBXContainerItemProxy */;
+			target = 0F08FCCB1DB1CFF40033E9F4 /* SwiftPad */;
+			targetProxy = 0F08FCE31DB1CFF50033E9F4 /* PBXContainerItemProxy */;
 		};
-		0F372C201DB1B6E60005556A /* PBXTargetDependency */ = {
+		0F08FCEF1DB1CFF50033E9F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F372BFC1DB1B6E50005556A /* SwiftPad */;
-			targetProxy = 0F372C1F1DB1B6E60005556A /* PBXContainerItemProxy */;
+			target = 0F08FCCB1DB1CFF40033E9F4 /* SwiftPad */;
+			targetProxy = 0F08FCEE1DB1CFF50033E9F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F372C061DB1B6E50005556A /* Main.storyboard */ = {
+		0F08FCD51DB1CFF50033E9F4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0F372C071DB1B6E50005556A /* Base */,
+				0F08FCD61DB1CFF50033E9F4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0F372C0B1DB1B6E50005556A /* LaunchScreen.storyboard */ = {
+		0F08FCDA1DB1CFF50033E9F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0F372C0C1DB1B6E50005556A /* Base */,
+				0F08FCDB1DB1CFF50033E9F4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,7 +541,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0F372C251DB1B6E60005556A /* Debug */ = {
+		0F08FCF41DB1CFF50033E9F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -362,17 +581,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		0F372C261DB1B6E60005556A /* Release */ = {
+		0F08FCF51DB1CFF50033E9F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -406,43 +626,51 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		0F372C281DB1B6E60005556A /* Debug */ = {
+		0F08FCF71DB1CFF50033E9F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C54BA333F66D95A62E27705 /* Pods-SwiftPad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MKQ89D2PC4;
+				DEVELOPMENT_TEAM = KZJH6SNM75;
 				INFOPLIST_FILE = SwiftPad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		0F372C291DB1B6E60005556A /* Release */ = {
+		0F08FCF81DB1CFF50033E9F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21AA7724F6101AE4FB6A98B7 /* Pods-SwiftPad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MKQ89D2PC4;
+				DEVELOPMENT_TEAM = KZJH6SNM75;
 				INFOPLIST_FILE = SwiftPad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		0F372C2B1DB1B6E60005556A /* Debug */ = {
+		0F08FCFA1DB1CFF50033E9F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154F4D929832FC5FF519ADD6 /* Pods-SwiftPadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,8 +684,9 @@
 			};
 			name = Debug;
 		};
-		0F372C2C1DB1B6E60005556A /* Release */ = {
+		0F08FCFB1DB1CFF50033E9F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FE869FFC271AB577CF2D32 /* Pods-SwiftPadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,8 +700,9 @@
 			};
 			name = Release;
 		};
-		0F372C2E1DB1B6E60005556A /* Debug */ = {
+		0F08FCFD1DB1CFF50033E9F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F638F7D66E1EB248BB50EE /* Pods-SwiftPadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MKQ89D2PC4;
@@ -485,8 +715,9 @@
 			};
 			name = Debug;
 		};
-		0F372C2F1DB1B6E60005556A /* Release */ = {
+		0F08FCFE1DB1CFF50033E9F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28694C791EFB4587AD5A2D71 /* Pods-SwiftPadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = MKQ89D2PC4;
@@ -502,40 +733,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F372BF81DB1B6E50005556A /* Build configuration list for PBXProject "SwiftPad" */ = {
+		0F08FCC71DB1CFF40033E9F4 /* Build configuration list for PBXProject "SwiftPad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F372C251DB1B6E60005556A /* Debug */,
-				0F372C261DB1B6E60005556A /* Release */,
+				0F08FCF41DB1CFF50033E9F4 /* Debug */,
+				0F08FCF51DB1CFF50033E9F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F372C271DB1B6E60005556A /* Build configuration list for PBXNativeTarget "SwiftPad" */ = {
+		0F08FCF61DB1CFF50033E9F4 /* Build configuration list for PBXNativeTarget "SwiftPad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F372C281DB1B6E60005556A /* Debug */,
-				0F372C291DB1B6E60005556A /* Release */,
+				0F08FCF71DB1CFF50033E9F4 /* Debug */,
+				0F08FCF81DB1CFF50033E9F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		0F372C2A1DB1B6E60005556A /* Build configuration list for PBXNativeTarget "SwiftPadTests" */ = {
+		0F08FCF91DB1CFF50033E9F4 /* Build configuration list for PBXNativeTarget "SwiftPadTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F372C2B1DB1B6E60005556A /* Debug */,
-				0F372C2C1DB1B6E60005556A /* Release */,
+				0F08FCFA1DB1CFF50033E9F4 /* Debug */,
+				0F08FCFB1DB1CFF50033E9F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		0F372C2D1DB1B6E60005556A /* Build configuration list for PBXNativeTarget "SwiftPadUITests" */ = {
+		0F08FCFC1DB1CFF50033E9F4 /* Build configuration list for PBXNativeTarget "SwiftPadUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F372C2E1DB1B6E60005556A /* Debug */,
-				0F372C2F1DB1B6E60005556A /* Release */,
+				0F08FCFD1DB1CFF50033E9F4 /* Debug */,
+				0F08FCFE1DB1CFF50033E9F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0F372BF51DB1B6E50005556A /* Project object */;
+	rootObject = 0F08FCC41DB1CFF40033E9F4 /* Project object */;
 }

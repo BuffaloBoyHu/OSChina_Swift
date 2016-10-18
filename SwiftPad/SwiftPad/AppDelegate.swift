@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow();
+        let tabBarController:APPTabbarController? = APPTabbarController();
+        let navigationController:UINavigationController? = UINavigationController.init(rootViewController: tabBarController!);
+        window?.rootViewController = navigationController;
+        window?.makeKeyAndVisible();
+        
+        // 设置导航条背景色
+        navigationController?.navigationBar.barTintColor = UITool.UIColorFromRGB(rgbValue: 0x0a5090);
+        navigationController?.navigationBar.tintColor = UIColor.white;
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white];
+        
+        
         return true
     }
 
