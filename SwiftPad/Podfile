@@ -14,6 +14,8 @@ target 'SwiftPad' do
   pod 'SDWebImage', '~> 4.0.0-beta2'
   pod 'Refresher', '~> 0.6.1'
   pod 'MJRefresh', '~> 3.1.12'
+  pod 'BetterSegmentedControl', '~> 0.5'
+  pod 'AFNetworking', '~> 3.1.0'
   
   target 'SwiftPadTests' do
     inherit! :search_paths

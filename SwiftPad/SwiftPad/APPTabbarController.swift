@@ -11,6 +11,8 @@ import UIKit
 class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
     let projectsController = CustomViewController.init(title: "项目", subTitles: ["推荐","热门","最近跟新"])
     let mineController = CustomViewController.init(title: "我的", subTitles: ["动态","项目","Star","Watch"])
+    let findController  :CustomCollectionController = CustomCollectionController.init()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,11 @@ class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
         self.projectsController.tabBarItem.selectedImage = #imageLiteral(resourceName: "projects_selected")
         self.mineController.tabBarItem.image = #imageLiteral(resourceName: "mine")
         self.mineController.tabBarItem.selectedImage = #imageLiteral(resourceName: "mine_selected")
-        self.viewControllers = [self.projectsController,self.mineController]
+        self.findController.tabBarItem.image = #imageLiteral(resourceName: "discover")
+        self.findController.tabBarItem.selectedImage = #imageLiteral(resourceName: "discover_selected")
+        self.findController.title = "发现"
+        
+        self.viewControllers = [self.projectsController,self.findController,self.mineController]
         self.title = self.selectedViewController?.title
         self.delegate = self
         

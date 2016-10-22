@@ -16,5 +16,8 @@ class UITool: NSObject {
         return color;
     }
     
-    
+   class public func uniformColor() -> UIColor {
+        
+        return UIColor.init(red: 235.0 / 255, green: 235.0 / 255, blue: 243.0 / 255, alpha: 1.0)
+    }
 }

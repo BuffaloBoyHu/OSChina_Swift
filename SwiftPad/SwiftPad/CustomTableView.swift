@@ -17,19 +17,25 @@ class CustomTableView: UITableView {
     init(cellReuseIndentifier :String) {
         self.tableName = cellReuseIndentifier
         super.init(frame: UIScreen.main.bounds, style: UITableViewStyle.plain);
-        self.addMjRefreshControl(needRefresh: true)
         self.register(CustomTableViewCell.self, forCellReuseIdentifier: cellReuseIndentifier)
+        self.addMjRefreshControl()
+        self.isNeedRefresh(refresh: true)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     // MARK: 添加刷新控件
-    func addMjRefreshControl(needRefresh :Bool) {
-        self.mj_header = MJRefreshHeader.init(refreshingTarget: self, refreshingAction: #selector(CustomTableView.pullToRefresh))
-        self.mj_footer = MJRefreshFooter.init(refreshingTarget: self, refreshingAction: #selector(CustomTableView.pullToLoadMore))
-        if needRefresh {
+    func addMjRefreshControl() {
+        self.mj_header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: #selector(CustomTableView.pullToRefresh))
+        self.mj_footer = MJRefreshBackNormalFooter.init(refreshingTarget: self, refreshingAction: #selector(CustomTableView.pullToLoadMore))
+    }
+    
+    open func isNeedRefresh(refresh :Bool) {
+        if refresh {
             self.mj_header.beginRefreshing()
+        }else {
+            self.mj_header.endRefreshing()
         }
     }
     

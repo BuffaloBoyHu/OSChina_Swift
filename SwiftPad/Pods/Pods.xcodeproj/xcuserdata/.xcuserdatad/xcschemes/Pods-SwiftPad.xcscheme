@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7340C969C8D62C22844EA97C203E6AFE'
+               BlueprintIdentifier = '65B2D7A6910CE1C42D95F1900320FB10'
                BlueprintName = 'Pods-SwiftPad'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-SwiftPad.framework'>

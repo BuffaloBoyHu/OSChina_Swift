@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>BetterSegmentedControl.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
@@ -57,6 +67,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>221E92B77A704D09E69FC054077AFC56</key>
 		<dict>
 			<key>primary</key>
@@ -72,12 +87,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3B5065B71DCE153AB89ECDAB1E743A0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C068A58B0DECF71FC3B64A1C1B68BBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FED6DF5D4E7F872DA90EB4F7FD29729</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43B7207BFE418F3CD359840DC6C14DA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>46D545168E5028F1BD9E1E814C57E709</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>52076D7C3696A0ED1294F8D35A45FC04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>597B246D4391B66B8AEA19024D8F8230</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65B2D7A6910CE1C42D95F1900320FB10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +137,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7E4CA125BFACC1F54A4B89E3F7FA2E25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>82D29B67C65D0E5361067DFEAF33C961</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83CA19359D33122D14B1D9FCB480B167</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,7 +162,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BC78582192654A2956BC75B71C99AF6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BD6D2FAF71729C422DB2AED57427B25F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBB1A49FEFA3FEC5FDDAB226161AB467</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -128,6 +193,11 @@
 			<true/>
 		</dict>
 		<key>E8F427524267D7B4A66272E940B05CF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0FB067D3248B5057B0FF0EDC34F938C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

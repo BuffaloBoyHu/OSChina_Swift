@@ -13,13 +13,17 @@
 		0F08FCDC1DB1CFF50033E9F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F08FCDA1DB1CFF50033E9F4 /* LaunchScreen.storyboard */; };
 		0F08FCE71DB1CFF50033E9F4 /* SwiftPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F08FCE61DB1CFF50033E9F4 /* SwiftPadTests.swift */; };
 		0F08FCF21DB1CFF50033E9F4 /* SwiftPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F08FCF11DB1CFF50033E9F4 /* SwiftPadUITests.swift */; };
+		0F1622651DBA0B8B002799A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1622641DBA0B8B002799A4 /* DetailViewController.swift */; };
 		0F796E851DB5F6CD00F94DA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F796E841DB5F6CD00F94DA5 /* API.swift */; };
 		0F796E881DB605B700F94DA5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F796E871DB605B700F94DA5 /* CustomTableViewCell.swift */; };
 		0F796E8A1DB608DC00F94DA5 /* MarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F796E891DB608DC00F94DA5 /* MarkView.swift */; };
+		0F7B930E1DB7099E003409ED /* TitleViewsSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B930D1DB7099E003409ED /* TitleViewsSegment.swift */; };
 		0FA343F31DB47F3D00BB4C7F /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */; };
 		0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */; };
 		0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */; };
 		0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA41DB46AC900409CF2 /* UITool.swift */; };
+		0FF911AB1DB74B3100F664A8 /* CustomCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF911AA1DB74B3100F664A8 /* CustomCollectionController.swift */; };
+		0FF911AD1DB74B5F00F664A8 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF911AC1DB74B5F00F664A8 /* CustomCollectionViewCell.swift */; };
 		EFF7792548DC2FD953CE0C1D /* Pods_SwiftPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AC16CE2F662CBADE351D8B /* Pods_SwiftPadTests.framework */; };
 		F1C969E7ACEFEAA840A88ABD /* Pods_SwiftPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520BEDC8E545F33EA6217936 /* Pods_SwiftPadUITests.framework */; };
 		FD37B35CF9A05C5E55204CCD /* Pods_SwiftPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529A2E4BC73F0E305C370F3A /* Pods_SwiftPad.framework */; };
@@ -55,13 +59,17 @@
 		0F08FCED1DB1CFF50033E9F4 /* SwiftPadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F08FCF11DB1CFF50033E9F4 /* SwiftPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPadUITests.swift; sourceTree = "<group>"; };
 		0F08FCF31DB1CFF50033E9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F1622641DBA0B8B002799A4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0F796E841DB5F6CD00F94DA5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0F796E871DB605B700F94DA5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0F796E891DB608DC00F94DA5 /* MarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkView.swift; sourceTree = "<group>"; };
+		0F7B930D1DB7099E003409ED /* TitleViewsSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewsSegment.swift; sourceTree = "<group>"; };
 		0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabbarController.swift; sourceTree = "<group>"; };
 		0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		0FA7AAA41DB46AC900409CF2 /* UITool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITool.swift; sourceTree = "<group>"; };
+		0FF911AA1DB74B3100F664A8 /* CustomCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionController.swift; sourceTree = "<group>"; };
+		0FF911AC1DB74B5F00F664A8 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		154F4D929832FC5FF519ADD6 /* Pods-SwiftPadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		21AA7724F6101AE4FB6A98B7 /* Pods-SwiftPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPad/Pods-SwiftPad.release.xcconfig"; sourceTree = "<group>"; };
 		25FE869FFC271AB577CF2D32 /* Pods-SwiftPadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +181,8 @@
 				0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */,
 				0F796E871DB605B700F94DA5 /* CustomTableViewCell.swift */,
 				0F796E891DB608DC00F94DA5 /* MarkView.swift */,
+				0F7B930D1DB7099E003409ED /* TitleViewsSegment.swift */,
+				0FF911AC1DB74B5F00F664A8 /* CustomCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -181,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */,
+				0FF911AA1DB74B3100F664A8 /* CustomCollectionController.swift */,
+				0F1622641DBA0B8B002799A4 /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -494,11 +506,15 @@
 				0FA343F31DB47F3D00BB4C7F /* CustomTableView.swift in Sources */,
 				0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */,
 				0F08FCD01DB1CFF50033E9F4 /* AppDelegate.swift in Sources */,
+				0F1622651DBA0B8B002799A4 /* DetailViewController.swift in Sources */,
 				0F796E881DB605B700F94DA5 /* CustomTableViewCell.swift in Sources */,
+				0F7B930E1DB7099E003409ED /* TitleViewsSegment.swift in Sources */,
 				0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */,
 				0F796E851DB5F6CD00F94DA5 /* API.swift in Sources */,
 				0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */,
+				0FF911AB1DB74B3100F664A8 /* CustomCollectionController.swift in Sources */,
 				0F796E8A1DB608DC00F94DA5 /* MarkView.swift in Sources */,
+				0FF911AD1DB74B5F00F664A8 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
