@@ -10,19 +10,28 @@ import UIKit
 import SnapKit
 import BetterSegmentedControl
 
-class CustomViewController: UIViewController,UIScrollViewDelegate {
-    
+enum ProjectType :Int {
+    case Projects = 0,Find,Mine
+}
+
+class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate {
+
     var scrollView = UIScrollView()
     var tableViewsArray :Array<CustomTableView>
     let titleSegment :BetterSegmentedControl
-    
+    var type :ProjectType? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
+        do {
+            try self.titleSegment.set(index: 0, animated: true)
+        } catch {
+            
+        }
+        self.fetchObject(needRefresh: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +63,9 @@ class CustomViewController: UIViewController,UIScrollViewDelegate {
             let tableView = CustomTableView.init(cellReuseIndentifier: item)
             self.tableViewsArray.append(tableView)
             tableView.backgroundColor = UIColor.lightGray
+            tableView.dataSource = self
+            tableView.delegate = self
+            tableView.scrollsToTop = true
             self.scrollView.addSubview(tableView)
         }
         
@@ -76,7 +88,7 @@ class CustomViewController: UIViewController,UIScrollViewDelegate {
             make.height.equalTo(50)
         }
         self.scrollView.snp.makeConstraints { (make) in
-            make.top.equalTo(weakSelf.view.snp.top).offset(114)
+            make.top.equalTo(weakSelf.titleSegment.snp.bottom)
             make.left.equalTo(weakSelf.view.snp.left)
             make.right.equalTo(weakSelf.view.snp.right)
             make.bottom.equalTo(weakSelf.view.snp.bottom)
@@ -84,14 +96,14 @@ class CustomViewController: UIViewController,UIScrollViewDelegate {
         for (index,tableView) in self.tableViewsArray.enumerated() {
             if index == 0 {
                 tableView.snp.makeConstraints({ (make) in
-                    make.top.equalTo(weakSelf.view.snp.top).offset(64)
+                    make.top.equalTo(weakSelf.view.snp.top).offset(114)
                     make.bottom.equalTo(weakSelf.view.snp.bottom)
                     make.width.equalTo(weakSelf.view.snp.width)
                 })
             }else {
                 let tmp = self.tableViewsArray[index - 1]
                 tableView.snp.makeConstraints({ (make) in
-                    make.top.equalTo(weakSelf.view.snp.top).offset(64)
+                    make.top.equalTo(weakSelf.view.snp.top).offset(114)
                     make.bottom.equalTo(weakSelf.view.snp.bottom)
                     make.width.equalTo(weakSelf.view.snp.width)
                     make.left.equalTo(tmp.snp.right)
@@ -102,6 +114,58 @@ class CustomViewController: UIViewController,UIScrollViewDelegate {
     
     // MARK: segmentconrol 选中
     func changeSelectedIndex(sender :BetterSegmentedControl) {
+        self.scrollView.contentOffset.x = CGFloat(sender.index) * self.scrollView.frame.size.width
+    }
+    
+    // MARK: UIScrollViewDelegate
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let page = Int (scrollView.contentOffset.x / scrollView.frame.size.width)
+        do {
+            try self.titleSegment.set(index: UInt(page), animated: true)
+        } catch {
+            
+        }
+        scrollView.contentOffset.x = CGFloat(page) * scrollView.frame.size.width
         
     }
+    
+    // MARK: tableView Datasource
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let tmpTableView = tableView as! CustomTableView
+        return (tmpTableView.dataArray?.count)!
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tmpTableview = tableView as! CustomTableView
+        let cellIdentifier = tmpTableview.tableName!
+        let cell = tmpTableview.dequeueReusableCell(withIdentifier: cellIdentifier) as? CustomTableViewCell
+        let model = tmpTableview.dataArray?[indexPath.row] as! CustomModel
+        cell?.stuffCellWithModel(model: model)
+        cell?.updateConstraintsForSubviews()
+        cell?.setNeedsLayout()
+        return cell!
+    }
+    
+    // MARK: tableview delegate
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let tmpTableView = tableView as! CustomTableView
+        let model = tmpTableView.dataArray?[indexPath.row] as! CustomModel
+        return model.rowHeight
+    }
+    
+    // MARK: 数据
+    func fetchObject(needRefresh :Bool) {
+        if needRefresh {
+            for item in self.scrollView.subviews {
+                if let tableView :CustomTableView = item as? CustomTableView {
+                    tableView.isNeedRefresh(refresh: true)
+                }
+            }
+        }
+    }
+    
 }

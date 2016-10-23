@@ -17,7 +17,9 @@
 		0F796E851DB5F6CD00F94DA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F796E841DB5F6CD00F94DA5 /* API.swift */; };
 		0F796E881DB605B700F94DA5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F796E871DB605B700F94DA5 /* CustomTableViewCell.swift */; };
 		0F796E8A1DB608DC00F94DA5 /* MarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F796E891DB608DC00F94DA5 /* MarkView.swift */; };
-		0F7B930E1DB7099E003409ED /* TitleViewsSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B930D1DB7099E003409ED /* TitleViewsSegment.swift */; };
+		0F99D3D21DBB002D004FE069 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D3D11DBB002D004FE069 /* CustomModel.swift */; };
+		0F99D3D41DBB0041004FE069 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D3D31DBB0041004FE069 /* Owner.swift */; };
+		0F99D3D61DBB0050004FE069 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99D3D51DBB0050004FE069 /* NameSpace.swift */; };
 		0FA343F31DB47F3D00BB4C7F /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */; };
 		0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */; };
 		0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */; };
@@ -63,7 +65,9 @@
 		0F796E841DB5F6CD00F94DA5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0F796E871DB605B700F94DA5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0F796E891DB608DC00F94DA5 /* MarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkView.swift; sourceTree = "<group>"; };
-		0F7B930D1DB7099E003409ED /* TitleViewsSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewsSegment.swift; sourceTree = "<group>"; };
+		0F99D3D11DBB002D004FE069 /* CustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
+		0F99D3D31DBB0041004FE069 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		0F99D3D51DBB0050004FE069 /* NameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabbarController.swift; sourceTree = "<group>"; };
 		0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +185,6 @@
 				0FA343F21DB47F3D00BB4C7F /* CustomTableView.swift */,
 				0F796E871DB605B700F94DA5 /* CustomTableViewCell.swift */,
 				0F796E891DB608DC00F94DA5 /* MarkView.swift */,
-				0F7B930D1DB7099E003409ED /* TitleViewsSegment.swift */,
 				0FF911AC1DB74B5F00F664A8 /* CustomCollectionViewCell.swift */,
 			);
 			name = Views;
@@ -200,6 +203,9 @@
 		0FA7AA9E1DB4612600409CF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0F99D3D11DBB002D004FE069 /* CustomModel.swift */,
+				0F99D3D31DBB0041004FE069 /* Owner.swift */,
+				0F99D3D51DBB0050004FE069 /* NameSpace.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -506,15 +512,17 @@
 				0FA343F31DB47F3D00BB4C7F /* CustomTableView.swift in Sources */,
 				0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */,
 				0F08FCD01DB1CFF50033E9F4 /* AppDelegate.swift in Sources */,
+				0F99D3D61DBB0050004FE069 /* NameSpace.swift in Sources */,
 				0F1622651DBA0B8B002799A4 /* DetailViewController.swift in Sources */,
 				0F796E881DB605B700F94DA5 /* CustomTableViewCell.swift in Sources */,
-				0F7B930E1DB7099E003409ED /* TitleViewsSegment.swift in Sources */,
 				0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */,
 				0F796E851DB5F6CD00F94DA5 /* API.swift in Sources */,
 				0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */,
+				0F99D3D41DBB0041004FE069 /* Owner.swift in Sources */,
 				0FF911AB1DB74B3100F664A8 /* CustomCollectionController.swift in Sources */,
 				0F796E8A1DB608DC00F94DA5 /* MarkView.swift in Sources */,
 				0FF911AD1DB74B5F00F664A8 /* CustomCollectionViewCell.swift in Sources */,
+				0F99D3D21DBB002D004FE069 /* CustomModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

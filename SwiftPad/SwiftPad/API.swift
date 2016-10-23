@@ -18,26 +18,30 @@ let GITAPI_USER = "user"
 let GITAPI_EVENTS = "events"
 let GITAPI_LANGUAGE = "languages"
 
+// https://git.oschina.net/api/v3/projects/latest?page=1
+// "https://git.oschina.net/api/v3/https://git.oschina.net/api/v3//latest1"
+
+
 // 数据请求字符串
 public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,userID:Int64?,languageID:Int?,queryStr:String?) ->String {
     var urlString = GITAPI_HTTPS_PREFIX
     switch type {
     case .Featured:// 推荐
         urlString += GITAPI_PROJECTS
-        urlString += "/featured"
+        urlString += "/featured?"
     case .popular: //热门
         urlString += GITAPI_PROJECTS
-        urlString += "/popular"
+        urlString += "/popular?"
     case .Latest: // 最近
-        urlString += GITAPI_HTTPS_PREFIX
-        urlString += "/latest"
+        urlString += GITAPI_PROJECTS
+        urlString += "/latest?"
     case .Stared: // star
         urlString += GITAPI_USER + "/"
-        urlString += String.init(describing: userID)
+        urlString += "\(userID)"
         urlString += "/stared_projects"
     case .Watched: // watch
         urlString += GITAPI_USER + "/"
-        urlString += String.init(describing: userID)
+        urlString += "\(userID)"
         urlString += "/watched_projects"
     case .Projects:// 项目
         if privateToken?.characters.count != 0 {
@@ -45,13 +49,13 @@ public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,us
             urlString += privateToken! + "&"
         }else {
             urlString += GITAPI_USER + "/"
-            urlString += String.init(describing: userID) + "/"
+            urlString += "\(userID)" + "/"
             urlString += GITAPI_PROJECTS + "?"
         }
     case .Language:
         urlString += GITAPI_PROJECTS
         urlString += "/languages/"
-        urlString += String.init(describing: languageID) + "?"
+        urlString += "\(languageID)" + "?"
     case .Search:
         urlString += GITAPI_PROJECTS
         urlString += "/search/"
@@ -61,9 +65,9 @@ public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,us
     case .EventForUser:
         urlString += GITAPI_EVENTS + "/"
         urlString += GITAPI_USER + "/"
-        urlString += String.init(describing: userID) + "?"
+        urlString += "\(userID)" + "?"
     }
-    urlString += String.init(describing: pageId)
+    urlString += "page=\(pageId)"
     return urlString;
 }
 

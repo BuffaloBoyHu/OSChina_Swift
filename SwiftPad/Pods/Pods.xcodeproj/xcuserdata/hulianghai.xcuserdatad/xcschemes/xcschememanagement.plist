@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>BetterSegmentedControl.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -87,6 +92,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>333E47F1004946B94926B19979768D18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B5065B71DCE153AB89ECDAB1E743A0A</key>
 		<dict>
 			<key>primary</key>
@@ -107,7 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4510022B6943F0D72827ADEC1A82BF51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>46D545168E5028F1BD9E1E814C57E709</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51F5962B9D4A2A4DEA82D39304005107</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -123,6 +143,11 @@
 			<true/>
 		</dict>
 		<key>65B2D7A6910CE1C42D95F1900320FB10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A3DE6816214D806D1B8FB09683B38DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,6 +197,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D7A6222310F1CE8FC5AB8378D06C848B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DBB1A49FEFA3FEC5FDDAB226161AB467</key>
 		<dict>
 			<key>primary</key>
@@ -193,6 +223,11 @@
 			<true/>
 		</dict>
 		<key>E8F427524267D7B4A66272E940B05CF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA4A24553EB655FFF87620EF50B907E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

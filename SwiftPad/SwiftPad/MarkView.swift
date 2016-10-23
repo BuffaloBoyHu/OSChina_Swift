@@ -29,8 +29,6 @@ class MarkView: UIView {
             self.markImageView.image = #imageLiteral(resourceName: "watch")
         }
         self.markLabel.text = markStr
-        self.markImageView.layer.cornerRadius = 8
-        self.markImageView.layer.masksToBounds = true
         
         self.markLabel.textColor = UITool.UIColorFromRGB(rgbValue: 0xb6b6b6)
         self.addSubview(markImageView)
@@ -51,7 +49,7 @@ class MarkView: UIView {
             make.height.width.equalTo(15)
         }
         self.markLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(weakSelf.markImageView.snp.right)
+            make.left.equalTo(weakSelf.markImageView.snp.right).offset(5)
             make.top.equalTo(weakSelf.snp.top)
             make.bottom.equalTo(weakSelf.snp.bottom)
             make.right.equalTo(weakSelf.snp.right)

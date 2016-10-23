@@ -9,7 +9,7 @@
 import UIKit
 
 class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
-    let projectsController = CustomViewController.init(title: "项目", subTitles: ["推荐","热门","最近跟新"])
+    let projectsController = CustomViewController.init(title: "项目", subTitles: ["推荐","热门","最近更新"])
     let mineController = CustomViewController.init(title: "我的", subTitles: ["动态","项目","Star","Watch"])
     let findController  :CustomCollectionController = CustomCollectionController.init()
     
@@ -18,8 +18,10 @@ class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
         super.viewDidLoad()
         self.projectsController.tabBarItem.image = #imageLiteral(resourceName: "projects")
         self.projectsController.tabBarItem.selectedImage = #imageLiteral(resourceName: "projects_selected")
+        self.projectsController.type = ProjectType.Projects
         self.mineController.tabBarItem.image = #imageLiteral(resourceName: "mine")
         self.mineController.tabBarItem.selectedImage = #imageLiteral(resourceName: "mine_selected")
+        self.mineController.type = ProjectType.Mine
         self.findController.tabBarItem.image = #imageLiteral(resourceName: "discover")
         self.findController.tabBarItem.selectedImage = #imageLiteral(resourceName: "discover_selected")
         self.findController.title = "发现"

@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import AlamofireImage
+import Alamofire
 
 class CustomTableViewCell: UITableViewCell {
     
@@ -22,16 +24,17 @@ class CustomTableViewCell: UITableViewCell {
     var watchMarkView :MarkView = MarkView.init(markType: MarkType.WatchType, markStr: nil)
     
     // MARK: 构造函数
-    init() {
-        super.init(style: UITableViewCellStyle.default, reuseIdentifier: nil)
-        self.contentView.addSubview(portraitImage)
-        self.contentView.addSubview(recommendIcon)
-        self.contentView.addSubview(titleLabel)
-        self.contentView.addSubview(contentLabel)
-        self.contentView.addSubview(languageMarkView)
-        self.contentView.addSubview(forkMarkView)
-        self.contentView.addSubview(starMarkView)
-        self.contentView.addSubview(watchMarkView)
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.contentView.addSubview(self.portraitImage)
+        self.contentView.addSubview(self.recommendIcon)
+        self.contentView.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.contentLabel)
+        self.contentView.addSubview(self.languageMarkView)
+        self.contentView.addSubview(self.forkMarkView)
+        self.contentView.addSubview(self.starMarkView)
+        self.contentView.addSubview(self.watchMarkView)
         
         self.contentLabel.numberOfLines = 0
         self.contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -39,8 +42,11 @@ class CustomTableViewCell: UITableViewCell {
         
         self.titleLabel.textColor = UITool.UIColorFromRGB(rgbValue: 0x294fa1)
         self.titleLabel.lineBreakMode = NSLineBreakMode.byTruncatingTail
-        
+        self.portraitImage.layer.cornerRadius = 8
+        self.portraitImage.layer.masksToBounds = true
         self.addConstraintForSubViews()
+        
+        self.backgroundColor = UITool.uniformColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -89,7 +95,7 @@ class CustomTableViewCell: UITableViewCell {
             make.height.equalTo(15)
         })
         self.forkMarkView.snp.makeConstraints({ (make) in
-            if !self.languageMarkView.isHidden {
+            if !weakSelf.languageMarkView.isHidden {
                 make.left.equalTo(weakSelf.languageMarkView.snp.right).offset(viewMargin)
             }else {
                 make.left.equalTo(weakSelf.recommendIcon.snp.left)
@@ -107,6 +113,41 @@ class CustomTableViewCell: UITableViewCell {
             make.bottom.equalTo(weakSelf.snp.bottom).offset(-viewMargin)
             make.height.equalTo(15)
         }
+    }
+    
+    func updateConstraintsForSubviews() {
+        unowned let weakSelf = self
+        
+        self.forkMarkView.snp.remakeConstraints { (make) in
+            if weakSelf.languageMarkView.isHidden {
+                make.left.equalTo(weakSelf.contentLabel.snp.left)
+            }else {
+                make.left.equalTo(weakSelf.languageMarkView.snp.right).offset(viewMargin)
+            }
+            make.bottom.equalTo(weakSelf.snp.bottom).offset(-viewMargin)
+            make.height.equalTo(15)
+        }
+        
+    }
+    
+    func stuffCellWithModel(model : CustomModel)  {
+        let urlString = model.owner?.new_portrait!
+        Alamofire.request(urlString!).responseImage { (response) in
+            if response.result.isSuccess {
+                self.portraitImage.image = response.result.value
+            }
+        }
+        self.titleLabel.text = "\((model.owner?.name)!)/\((model.name)!)"
+        self.contentLabel.text = model.descriptionStr!
+        if model.language == nil || model.language?.characters.count == 0  {
+            self.languageMarkView.isHidden = true
+        }else {
+            self.languageMarkView.isHidden = false
+            self.languageMarkView.markLabel.text = model.language
+        }
+        self.forkMarkView.markLabel.text = "\((model.forks_count)!)"
+        self.watchMarkView.markLabel.text = "\((model.watches_count)!)"
+        self.starMarkView.markLabel.text = "\((model.stars_count)!)"
     }
 
 }
