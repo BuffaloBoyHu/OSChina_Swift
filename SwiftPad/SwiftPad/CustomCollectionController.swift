@@ -74,8 +74,6 @@ class CustomCollectionController: UICollectionViewController,UICollectionViewDel
         collectionView.deselectItem(at: indexPath, animated: true)
         let cell = collectionView.cellForItem(at: indexPath) as! CustomCollectionViewCell
         cell.isSelected(selected: true)
-        let viewController = DetailViewController()
-        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

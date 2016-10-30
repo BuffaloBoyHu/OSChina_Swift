@@ -22,6 +22,8 @@ class CustomTableViewCell: UITableViewCell {
     var forkMarkView :MarkView = MarkView.init(markType: MarkType.ForkType, markStr: nil)
     var starMarkView :MarkView = MarkView.init(markType: MarkType.StarType, markStr: nil)
     var watchMarkView :MarkView = MarkView.init(markType: MarkType.WatchType, markStr: nil)
+    let separatorLine :UIView = UIView.init()
+    
     
     // MARK: 构造函数
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -35,6 +37,7 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.forkMarkView)
         self.contentView.addSubview(self.starMarkView)
         self.contentView.addSubview(self.watchMarkView)
+        self.contentView.addSubview(self.separatorLine)
         
         self.contentLabel.numberOfLines = 0
         self.contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -44,7 +47,11 @@ class CustomTableViewCell: UITableViewCell {
         self.titleLabel.lineBreakMode = NSLineBreakMode.byTruncatingTail
         self.portraitImage.layer.cornerRadius = 8
         self.portraitImage.layer.masksToBounds = true
+        self.separatorLine.backgroundColor = UIColor.darkGray
+        self.separatorLine.alpha = 0.8
+        
         self.addConstraintForSubViews()
+        
         
         self.backgroundColor = UITool.uniformColor()
     }
@@ -112,6 +119,11 @@ class CustomTableViewCell: UITableViewCell {
             make.left.equalTo(weakSelf.starMarkView.snp.right).offset(viewMargin)
             make.bottom.equalTo(weakSelf.snp.bottom).offset(-viewMargin)
             make.height.equalTo(15)
+        }
+        self.separatorLine.snp.makeConstraints { (make) in
+            make.bottom.equalTo(weakSelf.snp.bottom)
+            make.left.right.equalTo(weakSelf)
+            make.height.equalTo(0.5)
         }
     }
     

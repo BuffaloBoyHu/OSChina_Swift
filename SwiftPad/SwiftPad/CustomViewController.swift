@@ -148,13 +148,17 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
     
     // MARK: tableview delegate
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let tmpTableView = tableView as! CustomTableView
+        let detailController = DetailViewController()
+        detailController.model = tmpTableView.dataArray?[indexPath.row] as? CustomModel
+        self.navigationController?.pushViewController(detailController, animated: true)
+
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let tmpTableView = tableView as! CustomTableView
         let model = tmpTableView.dataArray?[indexPath.row] as! CustomModel
-        return model.rowHeight
+        return model.rowHeight + 75
     }
     
     // MARK: 数据

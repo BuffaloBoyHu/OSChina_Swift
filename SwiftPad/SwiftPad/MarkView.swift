@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 enum MarkType : Int{
-    case LanguageType,ForkType,StarType,WatchType
+    case LanguageType,ForkType,StarType,WatchType,ProjectDetail_time,ProjectDetail_fork,Projectdetal_public,ProjectDetail_language
 }
 
 class MarkView: UIView {
@@ -27,6 +27,14 @@ class MarkView: UIView {
             self.markImageView.image = #imageLiteral(resourceName: "star")
         case .WatchType:
             self.markImageView.image = #imageLiteral(resourceName: "watch")
+        case .ProjectDetail_time:
+            self.markImageView.image = #imageLiteral(resourceName: "projectDetails_time")
+        case .ProjectDetail_fork:
+            self.markImageView.image = #imageLiteral(resourceName: "projectDetails_fork")
+        case .Projectdetal_public:
+            self.markImageView.image = #imageLiteral(resourceName: "projectDetails_public")
+        case .ProjectDetail_language:
+            self.markImageView.image = #imageLiteral(resourceName: "projectDetails_language")
         }
         self.markLabel.text = markStr
         
@@ -50,9 +58,9 @@ class MarkView: UIView {
         }
         self.markLabel.snp.makeConstraints { (make) in
             make.left.equalTo(weakSelf.markImageView.snp.right).offset(5)
-            make.top.equalTo(weakSelf.snp.top)
-            make.bottom.equalTo(weakSelf.snp.bottom)
+            make.top.equalTo(weakSelf.markImageView.snp.top)
             make.right.equalTo(weakSelf.snp.right)
+            make.height.equalTo(weakSelf.markImageView)
         }
     }
 

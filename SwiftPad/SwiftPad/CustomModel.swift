@@ -29,12 +29,12 @@ class CustomModel: NSObject {
     var watches_count :NSInteger?
     var language :String?
     var paas :String?
-    var stared :String?
-    var watched :String?
+    var stared :Bool?
+    var watched :Bool?
     var relation :String?
     var recomm :NSInteger?
     var parent_path_with_namespace :String?
-    var rowHeight :CGFloat = 75
+    var rowHeight :CGFloat = 0
     
     init(dict : Dictionary<String,Any>) {
         super.init()
@@ -63,6 +63,15 @@ class CustomModel: NSObject {
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
         let size = label.sizeThatFits(CGSize.init(width: UIScreen.main.bounds.width - 80, height: CGFloat.infinity))
         self.rowHeight += size.height
+        // 待续
+        self.stared = dict["stared"] as? Bool
+        self.watched = dict["watched"] as? Bool
+        if self.stared == nil {
+            self.stared = false
+        }
+        if self.watched == nil {
+            self.watched = false
+        }
     }
     
 }

@@ -15,6 +15,7 @@ class CustomTableView: UITableView,UITableViewDelegate {
 
     var tableName :String? = nil
     var dataArray :Array<Any>? = [Any]()
+    var page :NSInteger = 1
     
     // MARK: 构造函数
     init(cellReuseIndentifier :String) {
@@ -23,6 +24,7 @@ class CustomTableView: UITableView,UITableViewDelegate {
         self.register(CustomTableViewCell.self, forCellReuseIdentifier: cellReuseIndentifier)
         self.addMjRefreshControl()
         self.isNeedRefresh(refresh: true)
+        self.separatorStyle = .none
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -67,9 +69,10 @@ class CustomTableView: UITableView,UITableViewDelegate {
     
     func pullToRefresh()  {
         // 下拉刷新
-        
+        self.page = 1
+        self.dataArray?.removeAll()
         let requestType = self.tableRequestType(name: self.tableName!)
-        let urlString = urlStrigOfType(type: requestType!, pageId: 1, privateToken: nil, userID: nil, languageID: nil, queryStr: nil)
+        let urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: nil, userID: nil, languageID: nil, queryStr: nil)
         Alamofire.request(urlString).responseJSON { (response) in
             let tmpArray = response.result.value as? Array<Any>
 //            self.dataArray! += tmpArray!
@@ -80,11 +83,28 @@ class CustomTableView: UITableView,UITableViewDelegate {
             }
             self.mj_header.endRefreshing()
             self.reloadData()
+            self.scrollToTop()
         }
         
     }
     
     func pullToLoadMore() {
         //上拉加载更多
+        self.page += 1
+        let requestType = self.tableRequestType(name: self.tableName!)
+        let urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: nil, userID: nil, languageID: nil, queryStr: nil)
+        Alamofire.request(urlString).responseJSON { (response) in
+            let tmpArray = response.result.value as? Array<Any>
+            //            self.dataArray! += tmpArray!
+            for item in tmpArray! {
+                let dict = item as? Dictionary<String,Any>
+                let model = CustomModel.init(dict: dict!)
+                self.dataArray?.append(model)
+            }
+            self.mj_footer.endRefreshing()
+            self.reloadData()
+            self.scrollToBottom()
+        }
+        
     }
 }
