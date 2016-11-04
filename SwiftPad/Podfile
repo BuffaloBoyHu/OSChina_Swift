@@ -18,6 +18,7 @@ target 'SwiftPad' do
   pod 'AFNetworking', '~> 3.1.0'
   pod 'AlamofireImage', '~> 3.1.0'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'UMengSocial', '~> 5.0'
   
   target 'SwiftPadTests' do
     inherit! :search_paths

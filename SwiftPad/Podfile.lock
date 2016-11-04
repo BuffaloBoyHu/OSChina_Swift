@@ -25,6 +25,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0-beta2)
   - SDWebImage/Core (4.0.0-beta2)
   - SnapKit (3.0.2)
+  - UMengSocial (5.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - Refresher (~> 0.6.1)
   - SDWebImage (~> 4.0.0-beta2)
   - SnapKit (~> 3.0.2)
+  - UMengSocial (~> 5.0)
   - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
@@ -51,8 +53,9 @@ SPEC CHECKSUMS:
   Refresher: 7c6f09ef3428aa921cb477611fb26bf29a9e5492
   SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 7c23651ffa499d3dd02c9d7dfdfa4700c312fa09
+PODFILE CHECKSUM: 74c3c80a1cd5350414ee24b8a42a46dd5289cc0c
 
 COCOAPODS: 1.0.0

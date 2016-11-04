@@ -17,7 +17,7 @@ enum ProjectType :Int {
 class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
     var scrollView = UIScrollView()
-    var tableViewsArray :Array<CustomTableView>
+    var tableViewsArray :Array<UITableView>
     let titleSegment :BetterSegmentedControl
     var type :ProjectType? = nil
     override func viewDidLoad() {
@@ -60,13 +60,15 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
         self.view.addSubview(self.scrollView)
         
         for item in subTitles {
-            let tableView = CustomTableView.init(cellReuseIndentifier: item)
+            let isDynamicType = item == "动态" ? true : false
+            let tableView = CustomTableView.init(cellReuseIndentifier: item, isDynamicType: isDynamicType)
             self.tableViewsArray.append(tableView)
             tableView.backgroundColor = UIColor.lightGray
             tableView.dataSource = self
             tableView.delegate = self
             tableView.scrollsToTop = true
             self.scrollView.addSubview(tableView)
+
         }
         
         self.view.addSubview(self.titleSegment)

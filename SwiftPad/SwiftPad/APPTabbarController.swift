@@ -37,8 +37,22 @@ class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK:UITabBarControllerDelegate
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let privateToken = Tools.privateToken()
+        if privateToken == "" && viewController == tabBarController.viewControllers?[2]{
+            let loginViewController = LoginViewController()
+            let navigationController = UINavigationController.init(rootViewController: loginViewController)
+            self.navigationController?.present(navigationController, animated: true, completion: nil)
+            return false
+        }
+        return true
+        
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         self.title = viewController.title
+        
     }
 
 }

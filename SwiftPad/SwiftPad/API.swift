@@ -37,11 +37,11 @@ public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,us
         urlString += "/latest?"
     case .Stared: // star
         urlString += GITAPI_USER + "/"
-        urlString += "\(userID)"
+        urlString += "\(userID!)"
         urlString += "/stared_projects"
     case .Watched: // watch
         urlString += GITAPI_USER + "/"
-        urlString += "\(userID)"
+        urlString += "\(userID!)"
         urlString += "/watched_projects"
     case .Projects:// 项目
         if privateToken?.characters.count != 0 {
@@ -49,13 +49,13 @@ public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,us
             urlString += privateToken! + "&"
         }else {
             urlString += GITAPI_USER + "/"
-            urlString += "\(userID)" + "/"
+            urlString += "\(userID!)" + "/"
             urlString += GITAPI_PROJECTS + "?"
         }
     case .Language:
         urlString += GITAPI_PROJECTS
         urlString += "/languages/"
-        urlString += "\(languageID)" + "?"
+        urlString += "\(languageID!)" + "?"
     case .Search:
         urlString += GITAPI_PROJECTS
         urlString += "/search/"
@@ -65,7 +65,7 @@ public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,us
     case .EventForUser:
         urlString += GITAPI_EVENTS + "/"
         urlString += GITAPI_USER + "/"
-        urlString += "\(userID)" + "?"
+        urlString += "\(userID!)" + "?"
     }
     urlString += "page=\(pageId)"
     return urlString;

@@ -45,6 +45,7 @@ class DetailViewController: UITableViewController {
         alertController.popoverPresentationController?.sourceRect = CGRect.init(origin: CGPoint.init(x: originX, y: originY!), size: .zero)
         
         alertController.addAction(UIAlertAction.init(title: "分享项目", style: .default, handler: { (action) in
+            weakSelf.showShareView()
             
         }))
         alertController.addAction(UIAlertAction.init(title: "复制链接", style: .default, handler: { (action) in
@@ -78,6 +79,22 @@ class DetailViewController: UITableViewController {
     
     func showShareView() {
         // toDo 添加友盟支持
+        let httpStr = GITAPI_HTTPS_PREFIX.components(separatedBy: "/api/v3/").first
+        let projectURL = "\(httpStr!)/\((self.model?.owner?.userName)!)/\((self.model?.path)!)"
+        // 微信设置
+        UMSocialData.default().extConfig.wxMessageType = UMSocialWXMessageTypeWeb
+        UMSocialData.default().extConfig.wechatSessionData.url = projectURL
+        UMSocialData.default().extConfig.wechatTimelineData.url = projectURL
+        UMSocialData.default().extConfig.title = self.model?.name
+        
+        // qq设置
+        UMSocialData.default().extConfig.qqData.qqMessageType = UMSocialQQMessageTypeDefault
+        UMSocialData.default().extConfig.qqData.title = self.model?.name
+        UMSocialData.default().extConfig.qqData.url = "\(httpStr!)/\((self.model?.owner?.userName)!)/\((self.model?.path)!)"
+        
+        // 新浪
+        UMSocialData.default().extConfig.sinaData.urlResource.setResourceType(UMSocialUrlResourceTypeDefault, url: "\(httpStr!)/\((self.model?.owner?.userName)!)/\((self.model?.path)!)")
+        UMSocialSnsService.presentSnsIconSheetView(self, appKey: "5423cd47fd98c58f04000c52", shareText: "我在关注\((self.model?.owner?.name)!)的项目\((self.model?.name)!)，你也来瞧瞧呗！\(projectURL)", shareImage: nil, shareToSnsNames: [UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQQ,UMShareToSina], delegate: nil)
         
     }
 
@@ -151,6 +168,26 @@ class DetailViewController: UITableViewController {
             return 20
         }
         return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 2 {
+            if indexPath.row == 1 {
+                let readMeController = ReadMeViewController()
+                readMeController.model = self.model
+                self.navigationController?.pushViewController(readMeController, animated: true)
+            }else if indexPath.row == 2 {
+                let codeController = CodeTableViewController()
+                codeController.projectId = "\((self.model?.id)!)"
+                codeController.ownerName = self.model?.owner?.userName
+                codeController.currentPath = ""
+                codeController.nameSpace = self.model?.path_with_namespace
+                codeController.projectName = self.model?.name
+                codeController.view.backgroundColor = UIColor.white
+                self.navigationController?.pushViewController(codeController, animated: true)
+            }
+        }
     }
 
     //MARK:  旋转
