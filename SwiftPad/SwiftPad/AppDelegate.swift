@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow();
         let tabBarController:APPTabbarController? = APPTabbarController();
-        let navigationController:UINavigationController? = UINavigationController.init(rootViewController: tabBarController!);
-        window?.rootViewController = navigationController;
+        window?.rootViewController = tabBarController;
         window?.makeKeyAndVisible();
         
         // 设置导航条背景色

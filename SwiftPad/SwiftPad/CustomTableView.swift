@@ -10,6 +10,7 @@ import UIKit
 import MJRefresh
 import Alamofire
 import YYKit
+import MBProgressHUD
 
 class CustomTableView: UITableView,UITableViewDelegate {
 
@@ -17,7 +18,10 @@ class CustomTableView: UITableView,UITableViewDelegate {
     var dataArray :Array<Any>? = [Any]()
     var page :NSInteger = 1
     var isDynamicType :Bool = false //  标示是否是“我的“ 栏目里面的动态
-    var userID :String? = "0"
+    var userID :Int64? = Tools.userID()
+    var languageID :Int? = 0
+    var privateToken :String? = Tools.privateToken()
+    var queryStr :String? = nil
     // MARK: 构造函数
     init(cellReuseIndentifier :String,isDynamicType :Bool) {
         self.tableName = cellReuseIndentifier
@@ -31,6 +35,12 @@ class CustomTableView: UITableView,UITableViewDelegate {
         
         self.addMjRefreshControl()
         self.isNeedRefresh(refresh: true)
+        let footLabel = UILabel.init(frame: CGRect.init(origin: .zero, size: .init(width: 300, height: 100)))
+        footLabel.backgroundColor = UIColor.clear
+        footLabel.textColor = UIColor.darkText
+        footLabel.text = "已全部加载完毕"
+        footLabel.textAlignment = .center
+        self.tableFooterView = footLabel
         self.separatorStyle = .none
     }
     
@@ -76,10 +86,14 @@ class CustomTableView: UITableView,UITableViewDelegate {
     
     func pullToRefresh()  {
         // 下拉刷新
+        unowned let weakSelf = self
+        let progressHUD = MBProgressHUD.showAdded(to: UIApplication.shared.windows.last!, animated: true)
+        progressHUD.mode = .customView
+        progressHUD.isUserInteractionEnabled = false
         self.page = 1
         self.dataArray?.removeAll()
         let requestType = self.tableRequestType(name: self.tableName!)
-        var urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: nil, userID: 0, languageID: nil, queryStr: nil)
+        var urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: self.privateToken, userID: self.userID, languageID: self.languageID, queryStr: self.queryStr)
         
         if self.isDynamicType {
             if Tools.privateToken() != "" {
@@ -89,36 +103,72 @@ class CustomTableView: UITableView,UITableViewDelegate {
             }
         }
         Alamofire.request(urlString).responseJSON { (response) in
-            let tmpArray = response.result.value as? Array<Any>
-//            self.dataArray! += tmpArray!
-            for item in tmpArray! {
-                let dict = item as? Dictionary<String,Any>
-                let model = CustomModel.init(dict: dict!)
-                self.dataArray?.append(model)
+            if response.result.isSuccess {
+                if let tmpArray = response.result.value as? Array<Any> {
+                    weakSelf.dataArray?.removeAll()
+                    for item in tmpArray {
+                        let dict = item as? Dictionary<String,Any>
+                        if weakSelf.isDynamicType {
+                            let model = DynamicModel.init(dict: dict!)
+                            weakSelf.dataArray?.append(model)
+                        }else {
+                            let model = CustomModel.init(dict: dict!)
+                            weakSelf.dataArray?.append(model)
+                        }
+                        
+                    }
+                    progressHUD.hide(animated: true)
+                    weakSelf.mj_header.endRefreshing()
+                    weakSelf.reloadData()
+                    weakSelf.scrollToTop()
+                }
+            }else {
+                progressHUD.label.text = "刷新失败"
+                progressHUD.detailsLabel.text = "请检查网络是否可用"
+                progressHUD.hide(animated: true, afterDelay: 3)
             }
-            self.mj_header.endRefreshing()
-            self.reloadData()
-            self.scrollToTop()
         }
         
     }
     
     func pullToLoadMore() {
         //上拉加载更多
+        unowned let weakSelf = self
+        let progressHUD = MBProgressHUD.showAdded(to: UIApplication.shared.windows.last!, animated: true)
+        progressHUD.mode = .customView
+        progressHUD.isUserInteractionEnabled = false
         self.page += 1
         let requestType = self.tableRequestType(name: self.tableName!)
-        let urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: nil, userID: nil, languageID: nil, queryStr: nil)
+        let urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: self.privateToken, userID: self.userID, languageID: self.languageID, queryStr: self.queryStr)
         Alamofire.request(urlString).responseJSON { (response) in
-            let tmpArray = response.result.value as? Array<Any>
-            //            self.dataArray! += tmpArray!
-            for item in tmpArray! {
-                let dict = item as? Dictionary<String,Any>
-                let model = CustomModel.init(dict: dict!)
-                self.dataArray?.append(model)
+            if response.result.isSuccess {
+                if let tmpArray = response.result.value as? Array<Any> {
+                    for item in tmpArray {
+                        let dict = item as? Dictionary<String,Any>
+                        if weakSelf.isDynamicType {
+                            let model = DynamicModel.init(dict: dict!)
+                            weakSelf.dataArray?.append(model)
+                        }else {
+                            let model = CustomModel.init(dict: dict!)
+                            weakSelf.dataArray?.append(model)
+                        }
+                        
+                    }
+                    weakSelf.mj_header.endRefreshing()
+                    weakSelf.reloadData()
+                    weakSelf.scrollToTop()
+                    progressHUD.hide(animated: true)
+                }else{
+                    progressHUD.label.text = "加载更多失败"
+                    progressHUD.detailsLabel.text = "请检查网络是否可用"
+                    progressHUD.hide(animated: true, afterDelay: 3)
+                }
+                
+            }else{
+                progressHUD.label.text = "加载失败"
+                progressHUD.detailsLabel.text = "请检查网络是否可用"
+                progressHUD.hide(animated: true, afterDelay: 3)
             }
-            self.mj_footer.endRefreshing()
-            self.reloadData()
-            self.scrollToBottom()
         }
         
     }

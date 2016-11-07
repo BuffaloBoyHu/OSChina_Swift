@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import Alamofire
+import AlamofireImage
 
 class DynamicTableViewCell: UITableViewCell {
 
@@ -55,6 +57,12 @@ class DynamicTableViewCell: UITableViewCell {
         self.contentTextView?.isSelectable = false
         self.contentTextView?.isSelectable = false
         
+        self.separatorLine.backgroundColor = UIColor.darkGray
+        self.separatorLine.alpha = 0.8
+        
+        self.timeLabel.textColor = UITool.UIColorFromRGB(rgbValue: 0xb6b6b6)
+        self.timeLabel.font =  UIFont.systemFont(ofSize: 15)
+        
         self.addConstraintsForSubViews()
     }
     
@@ -83,9 +91,24 @@ class DynamicTableViewCell: UITableViewCell {
             make.bottom.equalTo(weakSelf.snp.bottom).offset(-10)
             make.right.equalTo(weakSelf.snp.right).offset(-10)
         }
+        
+        self.separatorLine.snp.makeConstraints { (make) in
+            make.bottom.equalTo(weakSelf.snp.bottom)
+            make.left.right.equalTo(weakSelf)
+            make.height.equalTo(0.5)
+        }
     }
     
-    func stuffCellWithModel(model:CustomModel) {
+    func stuffCellWithModel(model:DynamicModel) {
+        unowned let weakSelf = self
+        let imageURL = model.customModel?.owner?.new_portrait
+        Alamofire.request(imageURL!).responseImage { (response) in
+            weakSelf.iconImageView.image = response.result.value
+        }
+        
+        self.titleLabel.attributedText = model.dynamicAttributeDescriptionStr()
+        self.timeLabel.text = UITool.formateDate(dateStr: model.createdAt)
+        self.contentTextView?.text = nil// todo
         
     }
 

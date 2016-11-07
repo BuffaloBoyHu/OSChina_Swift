@@ -16,22 +16,28 @@ enum ProjectType :Int {
 
 class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
-    var scrollView = UIScrollView()
-    var tableViewsArray :Array<UITableView>
+    let scrollView = UIScrollView()
+    var tableViewsArray :Array<CustomTableView>
     let titleSegment :BetterSegmentedControl
     var type :ProjectType? = nil
+    var subTitles :Array<String>? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initViews()
+        if self.title == "我的" {
+            let leftBtn = UIBarButtonItem.init(image: #imageLiteral(resourceName: "sidebar_mine"), style: .plain, target: self, action: #selector(profileBtnAction))
+            self.navigationItem.leftBarButtonItem = leftBtn
+            let rightBtn = UIBarButtonItem.init(image: #imageLiteral(resourceName: "SetUp"), style: .plain, target: self, action: #selector(setUpAction))
+            self.navigationItem.rightBarButtonItem = rightBtn
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.rightBarButtonItem = nil
         do {
             try self.titleSegment.set(index: 0, animated: true)
         } catch {
             
         }
-        self.fetchObject(needRefresh: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,42 +48,48 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
     // MARK: 构造函数
     init(title :String,subTitles :Array<String>) {
         self.tableViewsArray = Array<CustomTableView>()
-        
+        self.subTitles = subTitles
         self.titleSegment = BetterSegmentedControl.init(frame: CGRect.init(origin: CGPoint.init(x: 0, y: 64), size: CGSize.init(width: UIScreen.main.bounds.width, height: 50)), titles: subTitles, index: 0, backgroundColor: .white, titleColor: UIColor.black, indicatorViewBackgroundColor: UIColor(red:0.55, green:0.26, blue:0.86, alpha:1.00), selectedTitleColor: .blue)
         
         super.init(nibName: nil, bundle: nil);
         self.tabBarItem.title = title
         self.title = title
-        let screenFrame = UIScreen.main.bounds
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func initViews() {
+        let screenFrame = self.view.frame
         self.scrollView.delegate = self;
         self.scrollView.isPagingEnabled = true
         self.scrollView.showsVerticalScrollIndicator = false
         self.scrollView.showsHorizontalScrollIndicator = false
         self.scrollView.alwaysBounceHorizontal = true
-        self.scrollView.contentSize = CGSize.init(width: screenFrame.width * CGFloat(subTitles.count), height: screenFrame.height)
+        self.scrollView.contentSize = CGSize.init(width: screenFrame.width * CGFloat((self.subTitles?.count)!), height: screenFrame.height - 114)
         self.scrollView.contentOffset = CGPoint.zero
         self.scrollView.backgroundColor = UIColor.lightGray
         self.view.addSubview(self.scrollView)
         
-        for item in subTitles {
+        self.tableViewsArray.removeAll()
+        self.scrollView.removeAllSubviews()
+        for item in self.subTitles! {
             let isDynamicType = item == "动态" ? true : false
             let tableView = CustomTableView.init(cellReuseIndentifier: item, isDynamicType: isDynamicType)
-            self.tableViewsArray.append(tableView)
             tableView.backgroundColor = UIColor.lightGray
             tableView.dataSource = self
             tableView.delegate = self
             tableView.scrollsToTop = true
             self.scrollView.addSubview(tableView)
-
+            self.tableViewsArray.append(tableView)
+            tableView.isNeedRefresh(refresh: true)
         }
         
         self.view.addSubview(self.titleSegment)
         self.titleSegment.addTarget(self, action: #selector(changeSelectedIndex(sender:)), for: UIControlEvents.valueChanged)
         self.addConstraintForSubviews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: 添加约束
@@ -90,7 +102,7 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
             make.height.equalTo(50)
         }
         self.scrollView.snp.makeConstraints { (make) in
-            make.top.equalTo(weakSelf.titleSegment.snp.bottom)
+            make.top.equalTo(weakSelf.view.snp.top).offset(114)
             make.left.equalTo(weakSelf.view.snp.left)
             make.right.equalTo(weakSelf.view.snp.right)
             make.bottom.equalTo(weakSelf.view.snp.bottom)
@@ -140,12 +152,20 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tmpTableview = tableView as! CustomTableView
         let cellIdentifier = tmpTableview.tableName!
-        let cell = tmpTableview.dequeueReusableCell(withIdentifier: cellIdentifier) as? CustomTableViewCell
-        let model = tmpTableview.dataArray?[indexPath.row] as! CustomModel
-        cell?.stuffCellWithModel(model: model)
-        cell?.updateConstraintsForSubviews()
-        cell?.setNeedsLayout()
-        return cell!
+        if tmpTableview.isDynamicType {
+            let cell = tmpTableview.dequeueReusableCell(withIdentifier: cellIdentifier) as? DynamicTableViewCell
+            let model = tmpTableview.dataArray?[indexPath.row] as! DynamicModel
+            cell?.stuffCellWithModel(model: model)
+            return cell!
+            
+        }else {
+            let cell = tmpTableview.dequeueReusableCell(withIdentifier: cellIdentifier) as? CustomTableViewCell
+            let model = tmpTableview.dataArray?[indexPath.row] as! CustomModel
+            cell?.stuffCellWithModel(model: model)
+            cell?.updateConstraintsForSubviews()
+            cell?.setNeedsLayout()
+            return cell!
+        }
     }
     
     // MARK: tableview delegate
@@ -159,6 +179,10 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let tmpTableView = tableView as! CustomTableView
+        if  tmpTableView.isDynamicType {
+//            let model = tmpTableView.dataArray?[indexPath.row] as! DynamicModel
+            return 100
+        }
         let model = tmpTableView.dataArray?[indexPath.row] as! CustomModel
         return model.rowHeight + 75
     }
@@ -172,6 +196,17 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
                 }
             }
         }
+    }
+    
+    // MARK: navigationitem Action
+    func profileBtnAction() {
+        let userController = UserProfileViewController()
+        self.navigationController?.pushViewController(userController, animated: true)
+    }
+    
+    func setUpAction() {
+        let setupController = SetUpViewController()
+        self.navigationController?.pushViewController(setupController, animated: true)
     }
     
 }

@@ -26,6 +26,10 @@ class CustomCollectionController: UICollectionViewController,UICollectionViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .refresh, target: self, action: #selector(clearCellSelectedColor))
+        self.navigationItem.setRightBarButton(rightBarButtonItem, animated: true)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .search, target: self, action: #selector(searchAction))
 
         // Register cell classes
         self.collectionView!.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -33,14 +37,8 @@ class CustomCollectionController: UICollectionViewController,UICollectionViewDel
         self.collectionView?.delegate = self
         self.collectionView?.backgroundColor = UITool.uniformColor()
         self.collectionView?.alpha = 0.8
+        
         self.fetchData()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        let rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .refresh, target: self, action: #selector(clearCellSelectedColor))
-        self.tabBarController?.navigationItem.setRightBarButton(rightBarButtonItem, animated: true)
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -120,5 +118,8 @@ class CustomCollectionController: UICollectionViewController,UICollectionViewDel
     // MARK: 清除颜色
     func clearCellSelectedColor() {
         self.collectionView?.reloadData()
+    }
+    func searchAction() {
+        
     }
 }

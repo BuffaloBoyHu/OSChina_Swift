@@ -40,10 +40,22 @@ class CustomModel: NSObject {
         super.init()
         
         self.id = dict["id"] as? NSInteger
+        if self.id == nil {
+            self.id = 0
+        }
         self.name = dict["name"] as? String
+        if self.name == nil {
+            self.name = ""
+        }
         self.descriptionStr = dict["description"] as? String
+        if self.descriptionStr == nil {
+            self.descriptionStr = ""
+        }
         self.owner = Owner.init(dict: (dict["owner"] as? Dictionary<String,Any>)!)
         self.publicBool = dict["public"] as? Bool
+        if self.publicBool == nil {
+            self.publicBool = false
+        }
         self.path = dict["path"] as? String
         self.path_with_namespace = dict["path_with_namespace"] as? String
         self.issues_enabled = dict["issues_enabled"] as? Bool

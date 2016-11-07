@@ -54,6 +54,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>SAMKeychain.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -137,6 +142,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>492186CDBD3F8799769A476AE97AC16C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4BBF7EB25D9436124EFF537DB7C60B0D</key>
 		<dict>
 			<key>primary</key>
@@ -187,7 +197,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7C151E008302EA558DE161162B475CF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7E4CA125BFACC1F54A4B89E3F7FA2E25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E61D4653C49301916C0E465D79FD4E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -227,6 +247,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D758559399F0D97022E2658A7CA80BB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D7A6222310F1CE8FC5AB8378D06C848B</key>
 		<dict>
 			<key>primary</key>
@@ -257,6 +282,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>E8BD2F254812462E5DEA1FD716C876DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E8F427524267D7B4A66272E940B05CF1</key>
 		<dict>
 			<key>primary</key>
@@ -278,6 +308,11 @@
 			<true/>
 		</dict>
 		<key>F57F4CBFDD52041F22022EAC4C27D8E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD32CBE2BBBDF5B636B4EEF98209F8CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

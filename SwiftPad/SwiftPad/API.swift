@@ -38,13 +38,13 @@ public func urlStrigOfType(type :RequestType,pageId :Int,privateToken:String?,us
     case .Stared: // star
         urlString += GITAPI_USER + "/"
         urlString += "\(userID!)"
-        urlString += "/stared_projects"
+        urlString += "/stared_projects?"
     case .Watched: // watch
         urlString += GITAPI_USER + "/"
         urlString += "\(userID!)"
-        urlString += "/watched_projects"
+        urlString += "/watched_projects?"
     case .Projects:// 项目
-        if privateToken?.characters.count != 0 {
+        if (privateToken?.characters.count)! > 0 {
             urlString += GITAPI_PROJECTS + "?private_token="
             urlString += privateToken! + "&"
         }else {

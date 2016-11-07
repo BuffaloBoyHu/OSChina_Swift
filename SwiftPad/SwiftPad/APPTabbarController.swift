@@ -9,27 +9,34 @@
 import UIKit
 
 class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
-    let projectsController = CustomViewController.init(title: "项目", subTitles: ["推荐","热门","最近更新"])
-    let mineController = CustomViewController.init(title: "我的", subTitles: ["动态","项目","Star","Watch"])
-    let findController  :CustomCollectionController = CustomCollectionController.init()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.projectsController.tabBarItem.image = #imageLiteral(resourceName: "projects")
-        self.projectsController.tabBarItem.selectedImage = #imageLiteral(resourceName: "projects_selected")
-        self.projectsController.type = ProjectType.Projects
-        self.mineController.tabBarItem.image = #imageLiteral(resourceName: "mine")
-        self.mineController.tabBarItem.selectedImage = #imageLiteral(resourceName: "mine_selected")
-        self.mineController.type = ProjectType.Mine
-        self.findController.tabBarItem.image = #imageLiteral(resourceName: "discover")
-        self.findController.tabBarItem.selectedImage = #imageLiteral(resourceName: "discover_selected")
-        self.findController.title = "发现"
-        
-        self.viewControllers = [self.projectsController,self.findController,self.mineController]
+        self.initViews()
         self.title = self.selectedViewController?.title
         self.delegate = self
         
+    }
+    
+    func initViews() {
+        let projectsController = CustomViewController.init(title: "项目", subTitles: ["推荐","热门","最近更新"])
+        let mineController = CustomViewController.init(title: "我的", subTitles: ["动态","项目","Star","Watch"])
+        let findController  :CustomCollectionController = CustomCollectionController.init()
+        projectsController.tabBarItem.image = #imageLiteral(resourceName: "projects")
+        projectsController.tabBarItem.selectedImage = #imageLiteral(resourceName: "projects_selected")
+        projectsController.type = ProjectType.Projects
+        mineController.tabBarItem.image = #imageLiteral(resourceName: "mine")
+        mineController.tabBarItem.selectedImage = #imageLiteral(resourceName: "mine_selected")
+        mineController.type = ProjectType.Mine
+        findController.tabBarItem.image = #imageLiteral(resourceName: "discover")
+        findController.tabBarItem.selectedImage = #imageLiteral(resourceName: "discover_selected")
+        findController.title = "发现"
+        
+        let projectsNavController = UINavigationController.init(rootViewController: projectsController)
+        let findNavController = UINavigationController.init(rootViewController: findController)
+        let mineNavController = UINavigationController.init(rootViewController: mineController)
+        
+        self.viewControllers = [projectsNavController,findNavController,mineNavController]
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +50,7 @@ class APPTabbarController: UITabBarController,UITabBarControllerDelegate {
         if privateToken == "" && viewController == tabBarController.viewControllers?[2]{
             let loginViewController = LoginViewController()
             let navigationController = UINavigationController.init(rootViewController: loginViewController)
-            self.navigationController?.present(navigationController, animated: true, completion: nil)
+            self.present(navigationController, animated: true, completion: nil)
             return false
         }
         return true

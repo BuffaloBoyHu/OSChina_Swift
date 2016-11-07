@@ -90,6 +90,9 @@
 		0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */; };
 		0FA7AAA31DB4698C00409CF2 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */; };
 		0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7AAA41DB46AC900409CF2 /* UITool.swift */; };
+		0FA8562E1DCDC49100B4579A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8562D1DCDC49100B4579A /* UserProfile.swift */; };
+		0FA856301DCDC7B000B4579A /* UserFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8562F1DCDC7B000B4579A /* UserFollow.swift */; };
+		0FA856321DCE0DF500B4579A /* DynamicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA856311DCE0DF500B4579A /* DynamicModel.swift */; };
 		0FB222F51DC7213900B2486A /* CodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB222F41DC7213900B2486A /* CodeTableViewController.swift */; };
 		0FB222F71DC724DF00B2486A /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB222F61DC724DF00B2486A /* CodeModel.swift */; };
 		0FBC866F1DBCA75300961073 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC866E1DBCA75300961073 /* DetailViewController.swift */; };
@@ -210,6 +213,9 @@
 		0FA7AAA01DB466DC00409CF2 /* APPTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPTabbarController.swift; sourceTree = "<group>"; };
 		0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		0FA7AAA41DB46AC900409CF2 /* UITool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITool.swift; sourceTree = "<group>"; };
+		0FA8562D1DCDC49100B4579A /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		0FA8562F1DCDC7B000B4579A /* UserFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFollow.swift; sourceTree = "<group>"; };
+		0FA856311DCE0DF500B4579A /* DynamicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicModel.swift; sourceTree = "<group>"; };
 		0FB222F31DC7112E00B2486A /* SwiftPad_bridging_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftPad_bridging_header.h; sourceTree = "<group>"; };
 		0FB222F41DC7213900B2486A /* CodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTableViewController.swift; sourceTree = "<group>"; };
 		0FB222F61DC724DF00B2486A /* CodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
@@ -455,6 +461,9 @@
 				0F99D3D31DBB0041004FE069 /* Owner.swift */,
 				0F99D3D51DBB0050004FE069 /* NameSpace.swift */,
 				0FB222F61DC724DF00B2486A /* CodeModel.swift */,
+				0FA8562D1DCDC49100B4579A /* UserProfile.swift */,
+				0FA8562F1DCDC7B000B4579A /* UserFollow.swift */,
+				0FA856311DCE0DF500B4579A /* DynamicModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -562,7 +571,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = buffalo;
 				TargetAttributes = {
 					0F08FCCB1DB1CFF40033E9F4 = {
@@ -828,8 +837,10 @@
 				0F8D7E0C1DCAE16F009585EC /* UserProfileViewController.swift in Sources */,
 				0F796E881DB605B700F94DA5 /* CustomTableViewCell.swift in Sources */,
 				0FA7AAA11DB466DC00409CF2 /* APPTabbarController.swift in Sources */,
+				0FA856321DCE0DF500B4579A /* DynamicModel.swift in Sources */,
 				0FD62E421DC21FF700E9EF93 /* DetailProfileCell_Title.swift in Sources */,
 				0F796E851DB5F6CD00F94DA5 /* API.swift in Sources */,
+				0FA8562E1DCDC49100B4579A /* UserProfile.swift in Sources */,
 				0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */,
 				0F6F7B3F1DC782B0007864C5 /* CodeImageViewController.swift in Sources */,
 				0FB222F51DC7213900B2486A /* CodeTableViewController.swift in Sources */,
@@ -843,6 +854,7 @@
 				0FB222F71DC724DF00B2486A /* CodeModel.swift in Sources */,
 				0F99D3D21DBB002D004FE069 /* CustomModel.swift in Sources */,
 				0F23695E1DC6188D00FD0CBC /* Tools.swift in Sources */,
+				0FA856301DCDC7B000B4579A /* UserFollow.swift in Sources */,
 				0F2B8DE21DC4CCCE008E682A /* DetailViewCell.swift in Sources */,
 				0FBC866F1DBCA75300961073 /* DetailViewController.swift in Sources */,
 			);
@@ -917,6 +929,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -968,6 +981,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -998,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C54BA333F66D95A62E27705 /* Pods-SwiftPad.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KZJH6SNM75;
 				ENABLE_BITCODE = NO;
@@ -1015,6 +1030,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21AA7724F6101AE4FB6A98B7 /* Pods-SwiftPad.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KZJH6SNM75;
 				ENABLE_BITCODE = NO;

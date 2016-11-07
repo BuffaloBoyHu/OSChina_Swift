@@ -19,6 +19,15 @@ class Tools: NSObject {
         return tokenStr!
     }
     
+    class public func userID() -> Int64 {
+        let userDefaults = UserDefaults.standard
+        var userID :Int64? = userDefaults.value(forKey: "User_ID") as? Int64
+        if userID == nil {
+            userID = 0
+        }
+        return userID!
+    }
+    
     // MARK:  文件相关 
     class func fileNameSuffix(fileName :String) ->String {
         return (fileName.components(separatedBy: ".").last?.lowercased())!
@@ -72,7 +81,7 @@ class Tools: NSObject {
     }
     
     class func escapeHTML(htmlStr :String) ->String {
-        var resultStr = htmlStr as NSString
+        let resultStr = htmlStr as NSString
         let length :Int = resultStr.length
         resultStr.replacingOccurrences(of: "&", with: "&amp", options: .literal, range: NSRange.init(location: 0, length: length))
         resultStr.replacingOccurrences(of: "<", with: "&lt", options: .literal, range: NSRange.init(location: 0, length: length))
@@ -82,5 +91,6 @@ class Tools: NSObject {
         return String(resultStr)
         
     }
+    
     
 }
