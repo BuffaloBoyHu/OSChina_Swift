@@ -99,6 +99,8 @@
 		0FBC86751DBCABEB00961073 /* DetailStateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC86741DBCABEB00961073 /* DetailStateCell.swift */; };
 		0FD62E421DC21FF700E9EF93 /* DetailProfileCell_Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD62E411DC21FF700E9EF93 /* DetailProfileCell_Title.swift */; };
 		0FD62E441DC2201A00E9EF93 /* DetailProfileCell_Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD62E431DC2201A00E9EF93 /* DetailProfileCell_Content.swift */; };
+		0FF726831DD0BDAE0074F343 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726821DD0BDAE0074F343 /* SearchViewController.swift */; };
+		0FF726BF1DD0CF240074F343 /* CollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF726BE1DD0CF240074F343 /* CollectionDetailViewController.swift */; };
 		0FF911AB1DB74B3100F664A8 /* CustomCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF911AA1DB74B3100F664A8 /* CustomCollectionController.swift */; };
 		0FF911AD1DB74B5F00F664A8 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF911AC1DB74B5F00F664A8 /* CustomCollectionViewCell.swift */; };
 		EFF7792548DC2FD953CE0C1D /* Pods_SwiftPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AC16CE2F662CBADE351D8B /* Pods_SwiftPadTests.framework */; };
@@ -223,6 +225,8 @@
 		0FBC86741DBCABEB00961073 /* DetailStateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStateCell.swift; sourceTree = "<group>"; };
 		0FD62E411DC21FF700E9EF93 /* DetailProfileCell_Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileCell_Title.swift; sourceTree = "<group>"; };
 		0FD62E431DC2201A00E9EF93 /* DetailProfileCell_Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProfileCell_Content.swift; sourceTree = "<group>"; };
+		0FF726821DD0BDAE0074F343 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0FF726BE1DD0CF240074F343 /* CollectionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDetailViewController.swift; sourceTree = "<group>"; };
 		0FF911AA1DB74B3100F664A8 /* CustomCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionController.swift; sourceTree = "<group>"; };
 		0FF911AC1DB74B5F00F664A8 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		154F4D929832FC5FF519ADD6 /* Pods-SwiftPadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPadTests/Pods-SwiftPadTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 			children = (
 				0FA7AAA21DB4698C00409CF2 /* CustomViewController.swift */,
 				0FF911AA1DB74B3100F664A8 /* CustomCollectionController.swift */,
+				0FF726BE1DD0CF240074F343 /* CollectionDetailViewController.swift */,
 				0FBC866E1DBCA75300961073 /* DetailViewController.swift */,
 				0F23695B1DC6135A00FD0CBC /* ReadMeViewController.swift */,
 				0FB222F41DC7213900B2486A /* CodeTableViewController.swift */,
@@ -450,6 +455,7 @@
 				0F8D7E0F1DCAEB35009585EC /* SetUpViewController.swift */,
 				0F8D7E111DCAEE3A009585EC /* ShakingViewController.swift */,
 				0F88C58A1DCB8011003C90EC /* LoginViewController.swift */,
+				0FF726821DD0BDAE0074F343 /* SearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -844,6 +850,7 @@
 				0FA7AAA51DB46AC900409CF2 /* UITool.swift in Sources */,
 				0F6F7B3F1DC782B0007864C5 /* CodeImageViewController.swift in Sources */,
 				0FB222F51DC7213900B2486A /* CodeTableViewController.swift in Sources */,
+				0FF726831DD0BDAE0074F343 /* SearchViewController.swift in Sources */,
 				0F88C58B1DCB8011003C90EC /* LoginViewController.swift in Sources */,
 				0FD62E441DC2201A00E9EF93 /* DetailProfileCell_Content.swift in Sources */,
 				0F8D7E101DCAEB35009585EC /* SetUpViewController.swift in Sources */,
@@ -854,6 +861,7 @@
 				0FB222F71DC724DF00B2486A /* CodeModel.swift in Sources */,
 				0F99D3D21DBB002D004FE069 /* CustomModel.swift in Sources */,
 				0F23695E1DC6188D00FD0CBC /* Tools.swift in Sources */,
+				0FF726BF1DD0CF240074F343 /* CollectionDetailViewController.swift in Sources */,
 				0FA856301DCDC7B000B4579A /* UserFollow.swift in Sources */,
 				0F2B8DE21DC4CCCE008E682A /* DetailViewCell.swift in Sources */,
 				0FBC866F1DBCA75300961073 /* DetailViewController.swift in Sources */,

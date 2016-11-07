@@ -72,6 +72,11 @@ class CustomCollectionController: UICollectionViewController,UICollectionViewDel
         collectionView.deselectItem(at: indexPath, animated: true)
         let cell = collectionView.cellForItem(at: indexPath) as! CustomCollectionViewCell
         cell.isSelected(selected: true)
+        let dict = self.dataArray[indexPath.row] as! Dictionary<String,Any>
+        let detailController = CollectionDetailViewController()
+        detailController.title = dict["name"] as? String
+        detailController.languageID = dict["id"] as? Int
+        self.navigationController?.pushViewController(detailController, animated: true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -120,6 +125,7 @@ class CustomCollectionController: UICollectionViewController,UICollectionViewDel
         self.collectionView?.reloadData()
     }
     func searchAction() {
-        
+        let searchController = SearchViewController()
+        self.navigationController?.pushViewController(searchController, animated: true)
     }
 }

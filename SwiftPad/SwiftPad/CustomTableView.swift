@@ -22,6 +22,7 @@ class CustomTableView: UITableView,UITableViewDelegate {
     var languageID :Int? = 0
     var privateToken :String? = Tools.privateToken()
     var queryStr :String? = nil
+    var requestType :RequestType? = nil
     // MARK: 构造函数
     init(cellReuseIndentifier :String,isDynamicType :Bool) {
         self.tableName = cellReuseIndentifier
@@ -79,8 +80,14 @@ class CustomTableView: UITableView,UITableViewDelegate {
             return RequestType.Stared
         case "Watch":
             return RequestType.Watched
+        case "项目搜索":
+            if self.queryStr == nil {
+                self.queryStr = "(null)"
+            }
+            self.privateToken = "(null)"
+            return RequestType.Search
         default:
-            return nil
+            return RequestType.Language
         }
     }
     
@@ -92,8 +99,10 @@ class CustomTableView: UITableView,UITableViewDelegate {
         progressHUD.isUserInteractionEnabled = false
         self.page = 1
         self.dataArray?.removeAll()
-        let requestType = self.tableRequestType(name: self.tableName!)
-        var urlString = urlStrigOfType(type: requestType!, pageId: self.page, privateToken: self.privateToken, userID: self.userID, languageID: self.languageID, queryStr: self.queryStr)
+        if self.requestType == nil {
+          self.requestType = self.tableRequestType(name: self.tableName!)   
+        }
+        var urlString = urlStrigOfType(type: self.requestType!, pageId: self.page, privateToken: self.privateToken, userID: self.userID, languageID: self.languageID, queryStr: self.queryStr)
         
         if self.isDynamicType {
             if Tools.privateToken() != "" {
@@ -156,7 +165,7 @@ class CustomTableView: UITableView,UITableViewDelegate {
                     }
                     weakSelf.mj_header.endRefreshing()
                     weakSelf.reloadData()
-                    weakSelf.scrollToTop()
+                    weakSelf.scrollToBottom()
                     progressHUD.hide(animated: true)
                 }else{
                     progressHUD.label.text = "加载更多失败"

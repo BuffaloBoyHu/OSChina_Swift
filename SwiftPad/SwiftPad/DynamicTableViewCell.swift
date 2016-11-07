@@ -47,6 +47,7 @@ class DynamicTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.timeLabel)
         self.contentView.addSubview(self.separatorLine)
         self.contentView.addSubview(self.titleLabel)
+        self.backgroundColor = UITool.uniformColor()
         
         self.iconImageView.layer.cornerRadius = 5
         self.iconImageView.layer.masksToBounds = true
