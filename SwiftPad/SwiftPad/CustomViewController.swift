@@ -68,6 +68,7 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
         self.scrollView.showsVerticalScrollIndicator = false
         self.scrollView.showsHorizontalScrollIndicator = false
         self.scrollView.alwaysBounceHorizontal = true
+        self.scrollView.isDirectionalLockEnabled = true
         self.scrollView.contentSize = CGSize.init(width: screenFrame.width * CGFloat((self.subTitles?.count)!), height: screenFrame.height - 114)
         self.scrollView.contentOffset = CGPoint.zero
         self.scrollView.backgroundColor = UIColor.lightGray
@@ -133,13 +134,15 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
     
     // MARK: UIScrollViewDelegate
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let page = Int (scrollView.contentOffset.x / scrollView.frame.size.width)
-        do {
-            try self.titleSegment.set(index: UInt(page), animated: true)
-        } catch {
-            
+        if scrollView == self.scrollView {
+            let page = Int (scrollView.contentOffset.x / scrollView.frame.size.width)
+            do {
+                try self.titleSegment.set(index: UInt(page), animated: true)
+            } catch {
+                
+            }
+            scrollView.contentOffset.x = CGFloat(page) * scrollView.frame.size.width
         }
-        scrollView.contentOffset.x = CGFloat(page) * scrollView.frame.size.width
         
     }
     
@@ -160,6 +163,9 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
             
         }else {
             let cell = tmpTableview.dequeueReusableCell(withIdentifier: cellIdentifier) as? CustomTableViewCell
+            if indexPath.row >= (tmpTableview.dataArray?.count)! {
+                return cell!
+            }
             let model = tmpTableview.dataArray?[indexPath.row] as! CustomModel
             cell?.stuffCellWithModel(model: model)
             cell?.updateConstraintsForSubviews()
@@ -183,6 +189,7 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
 //            let model = tmpTableView.dataArray?[indexPath.row] as! DynamicModel
             return 100
         }
+        
         let model = tmpTableView.dataArray?[indexPath.row] as! CustomModel
         return model.rowHeight + 75
     }

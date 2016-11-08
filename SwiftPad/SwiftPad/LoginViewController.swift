@@ -92,7 +92,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         self.tipLabel.numberOfLines = 0
         self.tipLabel.lineBreakMode = .byWordWrapping
-        self.tipLabel.text = "tips:\n\t请使用Git@OSC的push邮箱和密码登录\n\t注册请前往 https://git.oschina.net"
+//        self.tipLabel.text = "tips:\n\t请使用Git@OSC的push邮箱和密码登录\n\t注册请前往 https://git.oschina.net"
         
         self.addConstraintForSubviews()
     }

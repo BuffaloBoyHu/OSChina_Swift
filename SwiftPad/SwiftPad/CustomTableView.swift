@@ -128,8 +128,8 @@ class CustomTableView: UITableView,UITableViewDelegate {
                     }
                     progressHUD.hide(animated: true)
                     weakSelf.mj_header.endRefreshing()
-                    weakSelf.reloadData()
                     weakSelf.scrollToTop()
+                    weakSelf.reloadData()
                 }
             }else {
                 progressHUD.label.text = "刷新失败"
