@@ -68,7 +68,7 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
         self.scrollView.showsVerticalScrollIndicator = false
         self.scrollView.showsHorizontalScrollIndicator = false
         self.scrollView.alwaysBounceHorizontal = true
-        self.scrollView.isDirectionalLockEnabled = true
+//        self.scrollView.isDirectionalLockEnabled = true
         self.scrollView.contentSize = CGSize.init(width: screenFrame.width * CGFloat((self.subTitles?.count)!), height: screenFrame.height - 114)
         self.scrollView.contentOffset = CGPoint.zero
         self.scrollView.backgroundColor = UIColor.lightGray
@@ -82,7 +82,8 @@ class CustomViewController: UIViewController,UIScrollViewDelegate,UITableViewDat
             tableView.backgroundColor = UIColor.lightGray
             tableView.dataSource = self
             tableView.delegate = self
-            tableView.scrollsToTop = true
+            tableView.alwaysBounceVertical = true
+            tableView.alwaysBounceHorizontal = false
             self.scrollView.addSubview(tableView)
             self.tableViewsArray.append(tableView)
             tableView.isNeedRefresh(refresh: true)

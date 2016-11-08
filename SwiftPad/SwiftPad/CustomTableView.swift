@@ -36,12 +36,6 @@ class CustomTableView: UITableView,UITableViewDelegate {
         
         self.addMjRefreshControl()
         self.isNeedRefresh(refresh: true)
-        let footLabel = UILabel.init(frame: CGRect.init(origin: .zero, size: .init(width: 300, height: 100)))
-        footLabel.backgroundColor = UIColor.clear
-        footLabel.textColor = UIColor.darkText
-        footLabel.text = "已全部加载完毕"
-        footLabel.textAlignment = .center
-        self.tableFooterView = footLabel
         self.separatorStyle = .none
     }
     
